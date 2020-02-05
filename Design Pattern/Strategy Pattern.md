@@ -6,7 +6,7 @@
 
 ### 문제 상황
 - 서로 다른 성격을 가진 자식 클래스를 다수 생성하여야 합니다.
-- 서로 다른 자식 클래스들은 메소드를 공유할 수도, 공유하지 않을 수도 있습니다.
+- 서로 다른 자식 클래스들은 메소드를 공유할 수도, 하지 않을 수도 있습니다.
 
 ### 실패한 해결 방법
 > 클래스 상속을 활용하는 경우
@@ -28,8 +28,37 @@
 ### 구현 방법
 - 부모 클래스는 자식 클래스의 메소드를 정의할 수 있는 인터페이스를 가지고 있습니다.
 
+### 샘플 코드
+```java
+public class MiniDuckSimulator {  
+    public static void main(String[] args) {  
+        MallardDuck mallard = new MallardDuck(); // Quack : Quack, Fly : can fly  
+  
+  FlyBehavior cantFly = () -> System.out.println("I can't fly");  
+  QuackBehavior squeak = () -> System.out.println("Squeak");  
+  
+  RubberDuck rubberDuckie = new RubberDuck(cantFly, squeak); // Quack : Squeak, Fly : can't fly  
+  DecoyDuck decoy = new DecoyDuck(); // Quack : Silence, Fly : can't fly  
+  
+  Duck model = new ModelDuck(); // Quack : Quack, Fly : can't fly  
+  
+  mallard.performQuack(); // Quack  
+  rubberDuckie.performQuack(); // Squeak  
+  decoy.performQuack(); // Silence  
+  
+  System.out.println();  
+  
+  model.performFly(); // can't fly  
+  model.setFlyBehavior(new FlyRocketPowered()); // flyBehavior = FlyRocketPowered  
+  model.performFly(); // flying with a rocket  
+  }  
+}
+```
 
-
+## 마치며..
+- 캡슐화된 패턴을 할당하고 지속적으로 변경해야 됨으로 네이밍이 중요할 것 같습니다.
+- 예시 코드에는 set, get 메소드가 존재함에도 lamda 를 통한 메소드를 생성하여 대입, 만들어진 클래스를 직접 대입, set 메소드를 이용한 할당을 하였습니다. 
+여기에 대한 추가 공부는 spring 을 배우는 시점에 다시 할 예정입니다.
 
 
 
@@ -38,5 +67,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NTUwNTU4M119
+eyJoaXN0b3J5IjpbLTk0MDQxODI4MCwxNzU1NTA1NTgzXX0=
 -->
