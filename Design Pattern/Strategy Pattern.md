@@ -78,10 +78,10 @@ public class MiniDuckSimulator1 {
 }
 ```
 
-## 마치며..
+## 마치며...
 - 캡슐화된 패턴을 할당하고 지속적으로 변경해야 됨으로 네이밍이 중요할 것 같습니다.
 - 예시 코드에는 set, get 메소드가 존재함에도 lamda 를 통한 메소드를 생성하여 대입, 만들어진 클래스를 직접 대입, set 메소드를 이용한 할당을 하였습니다. 
 여기에 대한 추가 공부는 spring 을 배우는 시점에 다시 할 예정입니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTIyMTk2MTMsMTc1NTUwNTU4M119
+eyJoaXN0b3J5IjpbODg3Njg4Nzc3LDE3NTU1MDU1ODNdfQ==
 -->
