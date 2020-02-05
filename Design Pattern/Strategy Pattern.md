@@ -30,30 +30,49 @@
 
 ### 샘플 코드
 ```java
-public class MiniDuckSimulator {  
-    public static void main(String[] args) {  
-        MallardDuck mallard = new MallardDuck(); // Quack : Quack, Fly : can fly  
-  
-  FlyBehavior cantFly = () -> System.out.println("I can't fly");  
-  QuackBehavior squeak = () -> System.out.println("Squeak");  
-  
-  RubberDuck rubberDuckie = new RubberDuck(cantFly, squeak); // Quack : Squeak, Fly : can't fly  
-  DecoyDuck decoy = new DecoyDuck(); // Quack : Silence, Fly : can't fly  
-  
-  Duck model = new ModelDuck(); // Quack : Quack, Fly : can't fly  
-  
-  mallard.performQuack(); // Quack  
-  rubberDuckie.performQuack(); // Squeak  
-  decoy.performQuack(); // Silence  
-  
-  System.out.println();  
-  
-  model.performFly(); // can't fly  
-  model.setFlyBehavior(new FlyRocketPowered()); // flyBehavior = FlyRocketPowered  
-  model.performFly(); // flying with a rocket  
-  }  
+public class MiniDuckSimulator {
+    public static void main(String[] args) {
+        MallardDuck mallard = new MallardDuck(); // Quack : Quack, Fly : can fly
+
+        FlyBehavior cantFly = () -> System.out.println("I can't fly");
+        QuackBehavior squeak = () -> System.out.println("Squeak");
+
+        RubberDuck rubberDuckie = new RubberDuck(cantFly, squeak); // Quack : Squeak, Fly : can't fly
+        DecoyDuck decoy = new DecoyDuck(); // Quack : Silence, Fly : can't fly
+
+        Duck model = new ModelDuck(); // Quack : Quack, Fly : can't fly
+
+        mallard.performQuack(); // Quack
+        rubberDuckie.performQuack(); // Squeak
+        decoy.performQuack(); // Silence
+
+        System.out.println();
+
+        model.performFly(); // can't fly
+        model.setFlyBehavior(new FlyRocketPowered()); // flyBehavior = FlyRocketPowered
+        model.performFly(); // flying with a rocket
+    }
 }
 ```
+
+
+```java
+public class MiniDuckSimulator1 {
+   public static void main(String[] args) {
+      Duck mallard = new MallardDuck(); // Quack : Quack, Fly : can fly
+      mallard.performQuack(); // Quack
+      mallard.performFly(); // flying
+
+      System.out.println();
+
+      Duck model = new ModelDuck(); // Quack : Quack, Fly : can't fly
+      model.performFly(); // can't fly
+      model.setFlyBehavior(new FlyRocketPowered()); // flyBehavior = FlyRocketPowered
+      model.performFly(); // flying with a rocket
+   }
+}
+```
+
 
 ## 마치며..
 - 캡슐화된 패턴을 할당하고 지속적으로 변경해야 됨으로 네이밍이 중요할 것 같습니다.
@@ -67,5 +86,5 @@ public class MiniDuckSimulator {
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MDQxODI4MCwxNzU1NTA1NTgzXX0=
+eyJoaXN0b3J5IjpbLTY3NTQ2OTY2NywxNzU1NTA1NTgzXX0=
 -->
