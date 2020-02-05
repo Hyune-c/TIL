@@ -33,6 +33,7 @@
 이를 위해서 생성자 또는 set 메소드를 사용합니다.
 
 ### 샘플 코드
+![img](https://user-images.githubusercontent.com/55722186/73810682-8e2ec200-481a-11ea-94e1-347464562d79.png)
 ```java
 public class MiniDuckSimulator {
     public static void main(String[] args) {
@@ -82,5 +83,5 @@ public class MiniDuckSimulator1 {
 - 예시 코드에는 set, get 메소드가 존재함에도 lamda 를 통한 메소드를 생성하여 대입, 만들어진 클래스를 직접 대입, set 메소드를 이용한 할당을 하였습니다. 
 여기에 대한 추가 공부는 spring 을 배우는 시점에 다시 할 예정입니다.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAxODU1NzU3LDE3NTU1MDU1ODNdfQ==
+eyJoaXN0b3J5IjpbLTEzOTIyMTk2MTMsMTc1NTUwNTU4M119
 -->
