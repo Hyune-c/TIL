@@ -17,7 +17,3 @@
 ## 마치며..
 
 #### java-monster-race 
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTA3NzcwMF19
--->
