@@ -1,13 +1,12 @@
-## TIL
+## TIL [링크](https://github.com/Hyune-c/TIL/tree/master/TIL)
 YYYY/MM/DD 로 정리하였습니다.
 
 ## Design Pattern [링크](https://github.com/Hyune-c/TIL/tree/master/Design%20Pattern)
 
-## Algorithm
-- 링크의 repository 에 있습니다. [링크](https://github.com/Hyune-c/algorithm)
+## Algorithm [링크](https://github.com/Hyune-c/algorithm)
 - leetcode 의 `Must Do Easy Questions` , `Easy liked 100`, codesqaud 의 추천 문제를 우선으로 풀고 있습니다.
 
-## Let's Read
+## Let's Read [링크](https://github.com/Hyune-c/TIL/tree/master/Let's%20Read)
 책을 읽고 난 후 이해하고 느낀 것을 저의 언어로 정리하였습니다.
 
 ## 공부하고 싶은 것들..
@@ -40,5 +39,5 @@ YYYY/MM/DD 로 정리하였습니다.
 - StringBuilder
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNTcwNTY2MF19
+eyJoaXN0b3J5IjpbMTg3ODk2ODM0MF19
 -->
