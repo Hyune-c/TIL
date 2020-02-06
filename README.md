@@ -1,7 +1,7 @@
 ## TIL
-연월일로 정리하였습니다.
+YYYY/MM/DD 로 정리하였습니다.
 
-## Design Pattern
+## Design Pattern [링크](https://github.com/Hyune-c/TIL/tree/master/Design%20Pattern)
 
 ## Algorithm
 - 링크의 repository 에 있습니다. [링크](https://github.com/Hyune-c/algorithm)
@@ -37,7 +37,8 @@
 - 메소드 오버로딩과 오버라이딩  
 - Stream, Lamda
 - Optional  
+- StringBuilder
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTU5MTE3NDBdfQ==
+eyJoaXN0b3J5IjpbMTIyNTcwNTY2MF19
 -->
