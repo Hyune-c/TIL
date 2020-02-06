@@ -7,6 +7,9 @@
 - 링크의 repository 에 있습니다. [링크](https://github.com/Hyune-c/algorithm)
 - leetcode 의 `Must Do Easy Questions` , `Easy liked 100`, codesqaud 의 추천 문제를 우선으로 풀고 있습니다.
 
+## Let's Read
+책을 읽고 난 후 이해하고 느낀 것을 저의 언어로 정리하였습니다.
+
 ## 공부하고 싶은 것들..
 
 #### 디자인 패턴
@@ -36,5 +39,5 @@
 - Optional  
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Njg5MjcxMjhdfQ==
+eyJoaXN0b3J5IjpbLTE4OTU5MTE3NDBdfQ==
 -->
