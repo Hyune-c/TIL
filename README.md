@@ -18,6 +18,8 @@ YYYY/MM/DD 로 정리하였습니다.
 #### 알고리즘 풀이
 #### UML / Diagram + 설계
 #### Factory (?)
+#### 자료구조
+- PriorityQueue 우선순위 큐
 #### Java
 - Enum
 - try-catch 문
@@ -40,5 +42,5 @@ YYYY/MM/DD 로 정리하였습니다.
 - mockito
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Njg2MTM0MjVdfQ==
+eyJoaXN0b3J5IjpbLTE1MDA0NTIwODNdfQ==
 -->
