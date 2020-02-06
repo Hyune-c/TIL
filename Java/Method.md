@@ -13,7 +13,9 @@ public int add(int val) {
 ```
 
 ### 매개 변수의 개수를 모르는 경우
-매개 변수의 개수는 정해져 있는 경우가 일반적이지만, 어떤 상황에서는 메소드를 선언할 때 매개 변수의 개수를 알 수 없는 경우도 있습니다. 이런 경우 2가지 방법이 있습니다.
+매개 변수의 개수는 정해져 있는 경우가 일반적이지만, 어떤 상황에서는 메소드를 선언할 때 매개 변수의 개수를 알 수 없는 경우도 있습니다.  
+
+이런 경우 2가지 방법이 있습니다.
 
 - 매개 변수를 배열로 받습니다.
 - 매개 변수를 '...' 을 통해 받습니다.
@@ -28,7 +30,7 @@ public class sumTest {
     return Arrays.stream(arr).sum();
   }
 
-  public int sum3(int... arr) {    // 매개 변수의 개수를 알 수 없음
+  public int sum3(int... arr) {     // 매개 변수의 개수를 알 수 없음
     return Arrays.stream(arr).sum();
   }
 
@@ -44,12 +46,19 @@ public class sumTest {
 }
 ```
 
-
-
 ### 함수 vs 메소드
 
 -   함수 : 함수는 독립적으로 존재하며, 로직 처리 후 결과를 반환합니다.
 -   메소드 : 메서드는 클래스에 종속되어 존재하며, 해당 클래스에 대한 객체가 생성되어야 사용할 수 있습니다.
+
+### 메소드 오버로딩 Overloading
+클래스 내에 이름은 같되, 매개 변수는 다른 (타입, 개수, 순서) 메소드를 선언하는 것을 뜻 합니다.
+- 리턴 타입만 다른 경우는 메소드 오버로딩으로 인정되지 않습니다.
+
+```java
+public int sum(int a, int b) {}    
+public double sum(int a, int b) {}  // Compile Error
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODIxNjc2Mjc2XX0=
+eyJoaXN0b3J5IjpbMTc3NDk4NzU0Myw4MjE2NzYyNzZdfQ==
 -->
