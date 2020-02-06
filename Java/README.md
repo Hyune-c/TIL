@@ -1,8 +1,8 @@
 # Java
-공부하는 시점에 내가 모르던 것, 또는 헷갈리던 점을 위주로 기록하였기에 많은 내용이 누락되어 있을 수도 있습니다.
+공부했던 시점에 내가 모르던 것, 또는 헷갈리던 점을 위주로 기록하였기에 기본적인 내용은 누락되어 있을 수 있습니다.
 
-- [Method]()
-- [Scope]()
+- [Method](https://github.com/Hyune-c/TIL/blob/master/Java/Method.md)
+- [Scope](https://github.com/Hyune-c/TIL/blob/master/Java/Scope.md)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzkxNzA0NzVdfQ==
+eyJoaXN0b3J5IjpbMTY2NTYzMjc4N119
 -->
