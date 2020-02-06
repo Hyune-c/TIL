@@ -7,6 +7,3 @@ this.numsQueue = new PriorityQueue<Integer>(new Comparator<Integer>() {
     return w2.compareTo(w1);  
   }  
 });
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTAxMjg4OTFdfQ==
--->
