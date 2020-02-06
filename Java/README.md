@@ -4,6 +4,7 @@
 ### Class
 - [Method](https://github.com/Hyune-c/TIL/blob/master/Java/Method.md)
 - [Scope](https://github.com/Hyune-c/TIL/blob/master/Java/Scope.md)
+- Mutable, Immutable
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NjM1NDY4MF19
+eyJoaXN0b3J5IjpbLTEyNDExNjkyNTNdfQ==
 -->
