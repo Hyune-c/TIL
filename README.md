@@ -8,6 +8,7 @@
 - leetcode 의 `Must Do Easy Questions` , `Easy liked 100`, codesqaud 의 추천 문제를 우선으로 풀고 있습니다.
 
 ## 공부하고 싶은 것들..
+
 #### 디자인 패턴
 #### TDD
 - maven, gradle
@@ -16,7 +17,11 @@
 #### 알고리즘 풀이
 #### UML / Diagram + 설계
 #### try-catch 문
+- try-with
 #### Enum
+#### Factory (?)
+#### I/O Stream
+- File
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5ODgzMzAwOF19
+eyJoaXN0b3J5IjpbNTUwMDU2MzUzXX0=
 -->
