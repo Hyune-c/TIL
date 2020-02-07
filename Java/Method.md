@@ -59,6 +59,3 @@ public class sumTest {
 public int sum(int a, int b) {}    
 public double sum(int a, int b) {}  // Compile Error
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3NDk4NzU0Myw4MjE2NzYyNzZdfQ==
--->
