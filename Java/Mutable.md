@@ -1,18 +1,44 @@
-# Mutable, Immutable
+# Mutable, Immutable  
 
-- Mutable 클래스 : 인스턴스가 생성된 후에 값의 내용이 변할 수 있는 클래스, 주소는 못 바꾼다. ex) String 을 제외한 참조 타입 변수
+인스턴스 생성 후 Mutable 객체는 인스턴스의 내용이 변할 수 있지만, Immutable 객체는 변할 수 없습니다.
 
-- Immutable 클래스 : 그 클래스의 인스턴스가 일단 생성된 후에는 인스턴스의 내용이 절대 변하지 않는 특징을 갖는 클래스.
+| Feature        | Mutable                       | Immutable                                           |
+| -------------- | ----------------------------- | --------------------------------------------------- |
+| 멤버 변수 변경 | Y                             | N                                                   |
+| Getter         | Y                             | Y                                                   |
+| Setter         | Y                             | N                                                   |
+| Example        | java.util.Date, StringBuilder | Boxed primitive objects(Integer, String)<br />Lamda |
 
 
+## Why is String immutable? 
+Security
+- parameters are typically represented as String in network connections
+, database connection urls, usernames/passwords etc. If it were mutable, these parameters could be easily changed.
+
+Synchronization and concurrency
+- making String immutable automatically makes them thread safe thereby solving the synchronization issues.
+
+Caching
+- when compiler optimizes your String objects, it sees that if two objects have same value (a="test", and b="test") 
+and thus you need only one string object (for both a and b, these two will point to the same object).
+
+Class loading
+- String is used as arguments for class loading. 
+If mutable, it could result in wrong class being loaded (because mutable objects change their state).
 
 
+## Why don't use Immutable
+- Immutable 한 객체 간의 연산은 새로운 Immutable 객체를 생성해서 Heap 영역을 차지하게 됩니다. 
+- 물론 Garbage Collection 이 이를 정리하지만, GC 의 동작은 Java 의 속도를 저하시키는 가장 큰 요인 중 하나입니다.
 
 
-	- 스트링은 이뮤터블
-	- 스트링빌더는 뮤터블
-	- 람바는 이뮤터블
-	- 이뮤터블로 뭔가를 하면 그만큼 객체가 생성되고 gc 가 그것을 처리하기 때문에 속도 이슈가 생깁니다.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDg2OTAxNzFdfQ==
--->
+## String vs StringBuilder vs StringBuffer
+
+| Feature       | String            | StringBuilder    | StringBuffer     |
+| ------------- | ----------------- | ---------------- | ---------------- |
+| 불변성        | Immutable         | Mutable          | Mutable          |
+| append String | Create new Object | append in memory | append in memory |
+| 동시성        | Y                 | N                | Y                |
+
+## 참고자료 
+- https://novemberde.github.io/2017/04/15/String_0.html
