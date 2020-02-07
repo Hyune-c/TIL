@@ -7,7 +7,7 @@
 | 멤버 변수 변경 |                  Y                  |                           N                           |
 |     Getter     |                  Y                  |                           Y                           |
 |     Setter     |                  Y                  |                           N                           |
-|    Example     | java.util.Date<br />, StringBuilder | Boxed primitive objects (Integer, String)<br />, Lamda |
+|    Example     | java.util.Date, StringBuilder | Boxed primitive objects (Integer, String)<br />, Lamda |
 
 
 ## Why is String immutable? 
