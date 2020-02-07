@@ -47,6 +47,3 @@ public class Test {
 > 스코프
 
 같은 메소드
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNTQ1NzU5XX0=
--->
