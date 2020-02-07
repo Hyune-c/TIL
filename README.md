@@ -1,8 +1,10 @@
-# Commit Guide
+# Commit Message Guide
 Subject : `현재 상태 : 남은 작업에 대한 요약`
 
 - working : 남은 작업에 대한 요약
 - complete : 작성한 작업에 대한 요약
+
+> 예외적으로 TIL 은 'TIL' 로 메세지 통일합니다.
 
 ## TIL 
 YYYY/MM/DD 로 정리하였습니다.
@@ -46,7 +48,4 @@ YYYY/MM/DD 로 정리하였습니다.
 - Optional  
 - StringBuilder
 - mockito
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDA0NTIwODNdfQ==
--->
+- Stack, Heap, string constant pool, GC
