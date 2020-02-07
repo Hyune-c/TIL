@@ -9,7 +9,7 @@
 ### E-mail 로 Notifications 관리하기
 
 1. GitHub > Setting > Notifications 에 자신에게 필요한 항목들을 체크해줍니다.   
-특히 E-mail 부분을 잘 확인하여야 합니다.
+특히 E-mail 을 정확히 설정해야 합니다.
 
 2. App Store > Mail for Gmail 설치
 
@@ -23,9 +23,11 @@
 
 2. slack 에서 자기 자신에게 DM 을 보닙니다.
 
-3. /github subscribe code-squad/java-monster-race commits reviews comments  
+3. 아래의 명령어로 원하는 repo 에 원하는 타입의 알림을 볼 수 있습니다.  
+```
+/github subscribe code-squad/java-monster-race commits reviews comments  
 /github subscribe https://github.com/code-squad/java-monster-race commits reviews comments
-
+```
 <img src="https://user-images.githubusercontent.com/55722186/73999574-88ff7d80-49a8-11ea-8cc9-fe8e6bb404ad.png" width="500">
 
 ## 참고자료
