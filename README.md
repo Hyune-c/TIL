@@ -1,3 +1,9 @@
+# Commit Guide
+Subject : `현재 상태 : 남은 작업에 대한 요약`
+
+- working : 남은 작업에 대한 요약
+- complete : 작성한 작업에 대한 요약
+
 ## TIL 
 YYYY/MM/DD 로 정리하였습니다.
 
