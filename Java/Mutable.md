@@ -2,12 +2,12 @@
 
 인스턴스 생성 후 Mutable 객체는 인스턴스의 내용이 변할 수 있지만, Immutable 객체는 변할 수 없습니다.
 
-| Feature        | Mutable                       | Immutable                                           |
-| -------------- | ----------------------------- | --------------------------------------------------- |
-| 멤버 변수 변경 | Y                             | N                                                   |
-| Getter         | Y                             | Y                                                   |
-| Setter         | Y                             | N                                                   |
-| Example        | java.util.Date, StringBuilder | Boxed primitive objects(Integer, String)<br />Lamda |
+|    Feature     |               Mutable               |                       Immutable                       |
+| :------------: | :---------------------------------: | :---------------------------------------------------: |
+| 멤버 변수 변경 |                  Y                  |                           N                           |
+|     Getter     |                  Y                  |                           Y                           |
+|     Setter     |                  Y                  |                           N                           |
+|    Example     | java.util.Date<br />, StringBuilder | Boxed primitive objects<br />(Integer, String), Lamda |
 
 
 ## Why is String immutable? 
@@ -34,11 +34,11 @@ If mutable, it could result in wrong class being loaded (because mutable objects
 
 ## String vs StringBuilder vs StringBuffer
 
-| Feature       | String            | StringBuilder    | StringBuffer     |
-| ------------- | ----------------- | ---------------- | ---------------- |
-| 불변성        | Immutable         | Mutable          | Mutable          |
+|    Feature    |      String       |  StringBuilder   |   StringBuffer   |
+| :-----------: | :---------------: | :--------------: | :--------------: |
+|    불변성     |     Immutable     |     Mutable      |     Mutable      |
 | append String | Create new Object | append in memory | append in memory |
-| 동시성        | Y                 | N                | Y                |
+|    동시성     |         Y         |        N         |        Y         |
 
 ## 참고자료 
 - https://novemberde.github.io/2017/04/15/String_0.html
