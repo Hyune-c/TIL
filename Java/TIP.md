@@ -27,6 +27,8 @@ maxDistance = Math.max(curDistance, maxDistance);
 
 ## Working...
 
+
+
 this.numsQueue = new PriorityQueue<Integer>(new Comparator<Integer>() {  
   public int compare(Integer w1, Integer w2) {  
     return w2.compareTo(w1);  

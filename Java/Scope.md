@@ -47,3 +47,4 @@ public class Test {
 > 스코프
 
 같은 메소드
+
