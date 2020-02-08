@@ -25,6 +25,15 @@ maxDistance = (curDistance > maxDistance) ? curDistance : maxDistance;
 maxDistance = Math.max(curDistance, maxDistance);                     
 ```
 
+### 같은 문자가 정해진 길이의 문자열을 만들어야 되는 경우
+- StringBuilder 로 만드는 것이 보통이겠지만, 아래와 같이 만드는 방법도 있습니다. 
+ 
+```java
+movedDistance = new String(new char[moveBehavior.getMoveCount(roundCount)]).replace("\0", "-");
+
+movedDistance = (Stream.generate(() -> "-").limit(moveBehavior.getMoveCount(roundCount))).collect(Collectors.joining());
+```
+
 ## Working...
 
 
