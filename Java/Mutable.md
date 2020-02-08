@@ -29,7 +29,7 @@ If mutable, it could result in wrong class being loaded (because mutable objects
 
 ## Why don't use Immutable
 - Immutable 한 객체 간의 연산은 새로운 Immutable 객체를 생성해서 Heap 영역을 차지하게 됩니다. 
-- 물론 Garbage Collection 이 이를 정리하지만, GC 의 동작은 Java 의 속도를 저하시키는 가장 큰 요인 중 하나입니다.
+- 물론 Garbage Collection 이 정리하지만, GC 의 동작은 Java 의 속도를 저하시키는 가장 큰 요인 중 하나입니다.
 
 
 ## String vs StringBuilder vs StringBuffer
