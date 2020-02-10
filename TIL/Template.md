@@ -1,6 +1,6 @@
 # 20200205
 
-## 알고리즘
+## Algorithm
 > leetcode
 
 > programmers
