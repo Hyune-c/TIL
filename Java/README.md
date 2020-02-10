@@ -4,5 +4,5 @@
 ### Class
 - [Method](https://github.com/Hyune-c/TIL/blob/master/Java/Method.md)
 - [Scope](https://github.com/Hyune-c/TIL/blob/master/Java/Scope.md)
-- [Data Structure](https://github.com/Hyune-c/TIL/blob/master/Java/Data%20Structure.md)
 - [Mutable, Immutable](https://github.com/Hyune-c/TIL/blob/master/Java/Mutable.md)
+- [Access Modifier](https://github.com/Hyune-c/TIL/blob/master/Java/Access%20Modifier.md)
