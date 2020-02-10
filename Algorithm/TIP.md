@@ -31,6 +31,7 @@ movedDistance = new String(new char[moveBehavior.getMoveCount(roundCount)]).repl
 movedDistance = (Stream.generate(() -> "-").limit(moveBehavior.getMoveCount(roundCount))).collect(Collectors.joining());
 ```
 
+## ETC
 ### 실행 시간 구하기
 ```java
 long start = System.currentTimeMillis();
@@ -38,6 +39,25 @@ long start = System.currentTimeMillis();
 long end = System.currentTimeMillis();
 System.out.println("실행 시간(ms) : " + (end - start) / 1000.0);
 ```
+
+### HashMap 의 value 를 count 로 사용하기 위한 Override 
+```java
+class MyHashMap extends HashMap<Character, Integer> {
+  @Override
+  public Integer put(Character key, Integer value) {
+    if (super.containsKey(key)) return super.put(key, super.get(key) + 1);
+    return super.put(key, value);
+  }
+
+  @Override
+  public Integer remove(Object key) {
+    if (super.containsKey(key) && super.get(key) != 1)
+      return super.put((char) key, super.get(key) - 1);
+    return super.remove(key);
+  }
+}
+```
+
 
 ## Working...
 
