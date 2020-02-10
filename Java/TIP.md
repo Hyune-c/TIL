@@ -5,10 +5,10 @@
 ## 변수 다루기
 ### 매개 변수에서 변수를 계산할 때
 - 변수의 자료형에 따라 (3/2 = 1.0) 으로 계산되면서 의도하지 않은 결과가 나왔습니다.
-- 매개 변수로 들어가기 전에 변수를 계산하여 저장하는 방식을 추천합니다.
+- 변수를 계산하여 명시적으로 표기한 후 매개변수로 사용하는 방식을 권장합니다.
 ```java
 Math.ceil(1.5) = 2.0            // 의도한 결과
-Math.ceil(3 / 2) = 1.0          // ??
+Math.ceil(3 / 2) = 1.0          // 3 / 2 = 1.0 (not 1.5)
 
 Math.ceil((double) 3 / 2) = 2.0 // 매개 변수로 들어간 값을 casting 해서 해결  
 ```
@@ -17,10 +17,8 @@ Math.ceil((double) 3 / 2) = 2.0 // 매개 변수로 들어간 값을 casting 해
 ```java
 // 가장 일반적인 방법
 if (curDistance > maxDistance) maxDistance = curDistance;  
-             
 // 삼항 연산자를 활용한 방법
 maxDistance = (curDistance > maxDistance) ? curDistance : maxDistance;
-
 // 가장 깔끔한 방법  
 maxDistance = Math.max(curDistance, maxDistance);                     
 ```
@@ -30,8 +28,15 @@ maxDistance = Math.max(curDistance, maxDistance);
  
 ```java
 movedDistance = new String(new char[moveBehavior.getMoveCount(roundCount)]).replace("\0", "-");
-
 movedDistance = (Stream.generate(() -> "-").limit(moveBehavior.getMoveCount(roundCount))).collect(Collectors.joining());
+```
+
+### 실행 시간 구하기
+```java
+long start = System.currentTimeMillis();
+/* 실행할 코드 */
+long end = System.currentTimeMillis();
+System.out.println("실행 시간(ms) : " + (end - start) / 1000.0);
 ```
 
 ## Working...
