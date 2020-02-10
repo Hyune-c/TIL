@@ -11,18 +11,18 @@
 
 
 ## Why is String immutable? 
-Security
+###Security
 - parameters are typically represented as String in network connections
 , database connection urls, usernames/passwords etc. If it were mutable, these parameters could be easily changed.
 
 Synchronization and concurrency
 - making String immutable automatically makes them thread safe thereby solving the synchronization issues.
 
-Caching
+### Caching
 - when compiler optimizes your String objects, it sees that if two objects have same value (a="test", and b="test") 
 and thus you need only one string object (for both a and b, these two will point to the same object).
 
-Class loading
+### Class loading
 - String is used as arguments for class loading. 
 If mutable, it could result in wrong class being loaded (because mutable objects change their state).
 
