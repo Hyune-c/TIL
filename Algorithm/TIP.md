@@ -1,7 +1,5 @@
 # TIP
 
-공부를 하면서 분류하기 애매하지만 유용하다고 생각되는 실수와 잡기술(?) 을 정리하였습니다.
-
 ## 변수 다루기
 ### 매개 변수에서 변수를 계산할 때
 - 변수의 자료형에 따라 (3/2 = 1.0) 으로 계산되면서 의도하지 않은 결과가 나왔습니다.
@@ -62,9 +60,10 @@ class MyHashMap extends HashMap<Character, Integer> {
 ## Working...
 
 
-
+```java
 this.numsQueue = new PriorityQueue<Integer>(new Comparator<Integer>() {  
   public int compare(Integer w1, Integer w2) {  
     return w2.compareTo(w1);  
   }  
 });
+```
