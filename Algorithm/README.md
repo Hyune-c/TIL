@@ -1,4 +1,5 @@
 # Algorithm [링크](https://github.com/Hyune-c/algorithm)
+실제로 푼 문제들은 링크의 repo 에 있습니다.
 
 - Basic Data Structure
 - TIP

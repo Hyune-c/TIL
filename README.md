@@ -11,8 +11,9 @@ YYYY/MM/DD 로 정리하였습니다.
 
 ## Design Pattern 
 
-## Algorithm 
-주로 알고리즘을 풀면서 알게된 애매한 실수와 잡기술(?) 을 정리하였습니다.
+## Algorithm [링크](https://github.com/Hyune-c/algorithm)
+알고리즘을 풀면서 알게된 것들을 정리하였습니다.  
+실제로 푼 문제들은 링크의 repo 에 있습니다.
 
 ## Let's Read 
 책을 읽고 난 후 이해하고 느낀 것을 저의 언어로 정리하였습니다.
