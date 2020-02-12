@@ -3,8 +3,6 @@
 ## Algorithm
 > leetcode
 
-> programmers
-
 
 ## 개인 공부
 

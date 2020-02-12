@@ -3,4 +3,6 @@ Git 을 사용하면서 배운 것들을 기록하고 있습니다.
  
 ### Advanced Search Filter
 
-### Commit Guide
+### Commit
+- Commit Guide
+- 유용한 명령어들
