@@ -8,6 +8,20 @@
 하지만 hashCode() 와 identityHashCode() 를 통해 유사한 고유 값(?)을 가져올 수 있습니다.
 
 ```java
+### tmp
+hashCode() : 762218386
+identityHashCode() : 762218386
+hashCode() (HEX) : 2d6e8792
+toString : test$Temp@2d6e8792
+
+### tmp2
+hashCode() : 249515771
+identityHashCode() : 249515771
+hashCode() (HEX) : edf4efb
+toString : test$Temp@edf4efb
+```
+
+```java
 import java.util.Arrays;
 
 public class test {
@@ -36,19 +50,6 @@ public class test {
     printAddress(tmp2, "tmp2");
   }
 }
-```
-```java
-### tmp
-hashCode() : 762218386
-identityHashCode() : 762218386
-hashCode() (HEX) : 2d6e8792
-toString : test$Temp@2d6e8792
-
-### tmp2
-hashCode() : 249515771
-identityHashCode() : 249515771
-hashCode() (HEX) : edf4efb
-toString : test$Temp@edf4efb
 ```
 
 ## 참고 자료
