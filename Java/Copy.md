@@ -20,10 +20,10 @@
 | Using for          | Depend on code      | Depend on code          | Slow    |
 
 - Primitive Type 은 값 그 자체이기 때문에 Deep Copy 를 지원합니다.
-- Non-Primitive Type 은 주소를 복사하며 Swallow Copy 를 지원합니다.  
+- Non-Primitive Type 은 주소를 복사하며 Shallow Copy 를 지원합니다.  
 
 ### clone()
-clone() 은 shallow copy 를 지원합니다.  
+clone() 은 hallow copy 를 지원합니다.  
 하지만 deep copy 처럼 사용할 수 있는 이유는 java 의 컬렉션들이 shallow copy 된 내용을 새로운 객체로 복사하여 deep copy 를 해주기 때문입니다.  
 
 사용자 정의 클래스에서는 Cloneable 을 implements 해주거나 new 를 통해 deep copy 를 해주어야 합니다. 
