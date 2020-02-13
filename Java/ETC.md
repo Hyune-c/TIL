@@ -5,9 +5,9 @@ Java 공부를 하면서 알게된, 하지만 분류하기 애매한 것들을 �
 
 | Method             | Primitive Type Copy | Non-Primitive Type Copy | Speed   |
 | ------------------ | ------------------- | ----------------------- | ------- |
-| System.arraycopy() | Swallow             | Swallow                 | Fastest |
-| Object.clone()     | Swallow             | Swallow                 | Fast    |
-| Arrays.copyOf()    | Swallow             | Swallow                 | Fast    |
+| System.arraycopy() | Deep                | Shallow                 | Fastest |
+| Object.clone()     | Deep                | Shallow                 | Fast    |
+| Arrays.copyOf()    | Deep                | Shallow                 | Fast    |
 | Using for          | Depend on code      | Depend on code          | Slow    |
 
 ## Print Address [링크](https://github.com/Hyune-c/TIL/blob/master/Java/Print%20Address.md)

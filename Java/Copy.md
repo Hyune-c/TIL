@@ -14,9 +14,9 @@
 
 | Method             | Primitive Type Copy | Non-Primitive Type Copy | Speed   |
 | ------------------ | ------------------- | ----------------------- | ------- |
-| System.arraycopy() | Deep                | Swallow                 | Fastest |
-| Object.clone()     | Deep                | Swallow                 | Fast    |
-| Arrays.copyOf()    | Deep                | Swallow                 | Fast    |
+| System.arraycopy() | Deep                | Shallow                 | Fastest |
+| Object.clone()     | Deep                | Shallow                 | Fast    |
+| Arrays.copyOf()    | Deep                | Shallow                 | Fast    |
 | Using for          | Depend on code      | Depend on code          | Slow    |
 
 - Primitive Type 은 값 그 자체이기 때문에 Deep Copy 를 지원합니다.
