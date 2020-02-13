@@ -74,4 +74,5 @@ public class test {
 ### 참고 자료
 
 https://www.baeldung.com/java-deep-copy
-https://plas.tistory.com/20
+https://plas.tistory.com/20  
+https://baekjungho.github.io/java-cloneable/

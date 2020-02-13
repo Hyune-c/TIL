@@ -5,3 +5,5 @@
 ```java    
 monsters.stream().forEach(System.out::println);
 ```
+
+https://www.geeksforgeeks.org/double-colon-operator-in-java/
