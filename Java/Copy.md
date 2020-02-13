@@ -31,9 +31,9 @@ clone() 은 shallow copy 를 지원합니다.
 ### 샘플 코드
 사용자 정의 클래스의 Cloneable 를 implements 하지 않는 경우 clone 을 사용해도 shallow copy 가 됨을 확인할 수 있습니다. 
 
-<img src="https://user-images.githubusercontent.com/55722186/74404681-869c9800-4e6e-11ea-95a9-004f243aae3b.png" width=32%>
-<img src="https://user-images.githubusercontent.com/55722186/74404745-b2b81900-4e6e-11ea-87c4-4e19f3f003f1.png" width=32%>
-<img src="https://user-images.githubusercontent.com/55722186/74404762-bf3c7180-4e6e-11ea-853e-76dfe18a3724.png" width=33%>
+| origin                                                       | clone                                                        | forCopy                                                      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![img](https://user-images.githubusercontent.com/55722186/74404681-869c9800-4e6e-11ea-95a9-004f243aae3b.png) | ![img](https://user-images.githubusercontent.com/55722186/74404745-b2b81900-4e6e-11ea-87c4-4e19f3f003f1.png) | ![](https://user-images.githubusercontent.com/55722186/74404762-bf3c7180-4e6e-11ea-853e-76dfe18a3724.png) |
 
 ```java
 import java.util.Arrays;
@@ -67,7 +67,6 @@ public class test {
   }
 }
 ```
-
 ### 참고 자료
 
 https://www.baeldung.com/java-deep-copy
