@@ -13,3 +13,5 @@ Git 을 사용하면서 배운 것들을 기록하고 있습니다.
 - Set up Notifications
 
 ## Pull Request 
+
+## Init Repository
