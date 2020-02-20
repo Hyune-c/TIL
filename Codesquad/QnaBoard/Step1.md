@@ -95,3 +95,13 @@ upstream        https://github.com/code-squad/java-qna.git (push)
 
 #### 질문상세보기 요구사항
 - 모든 사용자는 질문 상세 내용을 볼 수 있어야 한다. ... complete
+
+### # step1 Refactoring
+- 메소드명 정상화 ... complete
+- @RequestMapping 대신 명시적인 @GetMapping @PostMapping 사용.  ... complete
+- href 가 "#" 인 a tag 제거.  ... complete
+- 저장 시 newline 이 붙도록 설정.  ... complete
+- 코드의 일관성 정리 ... complete
+
+### Heroku 배포
+https://codesquad-qnaboard.herokuapp.com/
