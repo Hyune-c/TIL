@@ -71,3 +71,13 @@ spring.h2.console.path=/h2-console
     - 질문 목록 조회 ... complete
     - 질문 상세 조회 ... complete
 - 회원정보 수정 ... complete
+
+### # step2 Refactoring
+- 변수 타입은 String 아닌 원형으로 저장합니다. (LocalDateTime) ... complete
+- index 보다는 id 로 변경합니다. ... complete
+- log4j2 를 적용합니다. ... complete
+- error 페이지에 대한 설정. ... working
+- request, forward, view 사용에 대한 변수명 재정의. ... complete 
+- 2개의 paht 를 한개의 메소드로 mapping 하고 방법 ... working?
+- index.html 에서 welcome.html 로 변경하면서 경로 수정 ... complete
+- javadoc 을 활용한 주석 추가와 메소드 순서 변경 ... complete
