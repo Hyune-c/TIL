@@ -112,3 +112,6 @@ public String show(@PathVariable long index, Model model) {
 }
 ```
 
+### # Spring 외부 라이브러리 설정
+- maven 에서는 xml 을 통해 해주는 것 처럼 gradle 은 resources 경로에 적절한 properties 를 만들어서 설정해주어야 합니다.
+
