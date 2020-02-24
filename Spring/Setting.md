@@ -58,7 +58,7 @@ spring.h2.console.path=/h2-console
 
 ## log4j2
 
-#### application.properties
+#### build.gradle
 
 ```properties
 configurations {
@@ -82,7 +82,7 @@ dependencies {
 }
 ```
 
-#### log4j2.properties
+#### log4j2.properties 
 
 ```properties
 status=error
