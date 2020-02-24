@@ -83,4 +83,29 @@ spring.mvc.hiddenmethod.filter.enabled=true
 @RequestMapping(value = "/users/{id}", method = RequestMethod.PUT) 
 ```
 
+### # View 호출 개념
+> 불필요한 mav 를 사용한 코드
+- 잘못 생각한 부분
+    - Mapping 된 페이지로 들어왔을 때, model 이 이미 결정되어 있는 것으로 생각하여 (/questions/{index}) 뷰 전환이 일어나야되는 경우 model 을 변경해줘야된다고 생각했습니다. 
+```java
+@GetMapping("/{index}")
+public ModelAndView show(@PathVariable long index) {
+    ModelAndView mav = new ModelAndView("/questions/show");
+    mav.addObject("questions", questionRepository.findById(index).get());
+
+    return mav;
+}
+```
+
+> 개선된 코드
+
+model 에 attribute 를 추가하고 view 를 전환해주는 것만으로 되는 것으로 볼 때, 실 페이지의 값과 model 은 종속적이지 않습니다.     
+```java
+@GetMapping("/{index}")
+public String show(@PathVariable long index, Model model) {
+    model.addAttribute("questions", questionRepository.findById(index).get());
+
+    return "/questions/show";
+}
+```
 
