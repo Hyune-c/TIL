@@ -31,97 +31,10 @@ First, rewinding head to replay your work on top of it...
 Fast-forwarded Hyune-c to upstream/Hyune-c.
 ```
 
-### # H2 DB 설정
-- build.gradle
-```java
-dependencies {
-    ...
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile("com.h2database:h2")
-    ...
-}
-```
-- application.properties
-```java
-# DB Connection 설정
-spring.datasource.url=jdbc:h2:mem://localhost/~/java-qna;DB_CLOSE_ON_EXIT=FALSE
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-# 실행 쿼리 보기 설정
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
-# 테이블 자동 생성 설정
-## 서버를 시작하는 시점에 DB 테이블을 drop후에 다시 생성하도록 설정하는 방법.
-spring.jpa.hibernate.ddl-auto=create-drop
-# h2 db console에 접근 설정
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
-```
+### # H2 DB 설정 & log4j2
 
-### # log4j2
+https://github.com/Hyune-c/TIL/blob/master/Spring/Setting.md
 
-#### application.properties
-
-```properties
-configurations {
-    ...
-    all {
-        // log4j2 로깅 설정 : 중복되는 logging 제거
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging' 
-    }
-    ...
-}
-
-dependencies {
-    ... 
-    // log4j2 로깅 설정
-    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.0'
-    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.0'
-
-    // slf4j 설정
-    compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.13.0'
-    ...
-}
-```
-
-#### log4j2.properties
-
-```properties
-status=error
-name=PropertiesConfig
-filters=threshold
-filter.threshold.type=ThresholdFilter
-filter.threshold.level=debug
-appenders=console
-appender.console.type=Console
-appender.console.name=STDOUT
-appender.console.layout.type=PatternLayout
-appender.console.layout.pattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
-rootLogger.level=info
-rootLogger.appenderRefs=stdout
-rootLogger.appenderRef.stdout.ref=STDOUT
-```
-
-####  예제
-
-```java
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-public class WelcomeController {
-
-  private static final Logger log = LoggerFactory.getLogger(WelcomeController.class);
-
-  public String welcome(Model model) {
-    log.debug("### welcome debug log message");
-    log.info("### welcome info log message");
-
-    return "/welcome";
-  }
-}
-```
 
 ### # 기능 구현
 - User 클래스를 DB 테이블에 매핑 ... complete
