@@ -4,8 +4,6 @@ Subject : `현재 상태 : 남은 작업에 대한 요약`
 - working : 남은 작업에 대한 요약
 - complete : 작성한 작업에 대한 요약
 
-> 예외적으로 TIL 은 'TIL' 로 통일합니다.
-
 ## TIL 
 YYYY/MM/DD 로 정리하였습니다.
 
