@@ -51,6 +51,6 @@ public class QnaApplication {
 2020-02-26 21:59:14 INFO  QnaApplication:13 - Simple log statement with inputs 1, 2 and 3
 ```
 ## 참고 자료
-https://projectlombok.org/setup/gradle
-https://stackoverflow.com/questions/9424364/cant-compile-project-when-im-using-lombok-under-intellij-idea
+https://projectlombok.org/setup/gradle  
+https://stackoverflow.com/questions/9424364/cant-compile-project-when-im-using-lombok-under-intellij-idea  
 https://howtodoinjava.com/spring-boot2/logging/logging-with-lombok/
