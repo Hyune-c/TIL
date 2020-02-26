@@ -18,7 +18,7 @@
     - 400, 403, 404, 500 에러에 대한 이미지 추가
 - DateTimeFormatter 한번만 선언 ... complete
 - Controller returnView 의 변수 선언 지양 ... complete
-- Optional 사용시 get() 사용 지양 (강제 언박싱) ... complete
+- Optional 사용시 get() 사용 지양 (강제 Unwrapping) ... complete
 - lombok 을 통한 logging 간소화 ... complete
 
 ### # 기능 구현
