@@ -14,5 +14,5 @@
 | static Optional ofNullable(T value)                    | 값이 null 이면 빈 Optional 객체를 반환.<br />값이 null 이 아니면 명시된 값의 Optional 객체를 반환. |
 | T orElse(T other)                                      | 값이 존재하면 해당 값을 반환.<br />값이 존재하지 않으면 명시된 값을 반환. |
 | T orElseGet(Supplier<? extends T> other)               | 값이 존재하면 해당 값을 반환.<br />값이 존재하지 않으면 인수로 전달된 람다 표현식의 결과값을 반환. |
-| T orElseThrow(Supplier<? extends X> exceptionSupplier) | 저장된 값이 존재하면 그 값을 반환.<br />값이 존재하지 않으면 인수로 전달된 예외를 발생. |
+| T orElseThrow(Supplier<? extends X> exceptionSupplier) | 값이 존재하면 해당 값을 반환.<br />값이 존재하지 않으면 인수로 전달된 예외를 발생. |
 
