@@ -9,7 +9,7 @@
 | :----------------------------------------------------- | :----------------------------------------------------------- |
 | static Optional empty()                                | 빈 Optional 객체를 반환.                                     |
 | T get()                                                | Optional 객체에 저장된 값을 반환.                            |
-| boolean isPresent()                                    |                                                              |
+| boolean isPresent()                                    | 값의 존재를 반환.                                                             |
 | static Optional of(T value)                            | 명시된 값의 Optional 객체를 반환.                            |
 | static Optional ofNullable(T value)                    | 값이 null 이면 빈 Optional 객체를 반환.<br />값이 null 이 아니면 명시된 값의 Optional 객체를 반환. |
 | T orElse(T other)                                      | 값이 존재하면 해당 값을 반환.<br />값이 존재하지 않으면 명시된 값을 반환. |
