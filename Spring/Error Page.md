@@ -1,8 +1,10 @@
 # Error Page
 
+
+## ErrorController 를 implements 하는 방식
 - ErrorController 를 구현하는 CustomErrorController 를 만들어 에러에 동적으로 대응할 수 있습니다. 
 
-## Class 소개
+#### # Class 소개
 
 - CustomErrorController 예제
 
@@ -37,7 +39,7 @@ public class ForbiddenException extends RuntimeException {
 }
 ```
 
-- `throw new ForbiddenException()` 예제
+#### # `throw new ForbiddenException()` 예제
 ```java
 @PutMapping("/{id}")
 public String update(@PathVariable long id, User newUser) {
