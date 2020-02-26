@@ -16,3 +16,5 @@
 | T orElseGet(Supplier<? extends T> other)               | 값이 존재하면 해당 값을 반환.<br />값이 존재하지 않으면 인수로 전달된 람다 표현식의 결과값을 반환. |
 | T orElseThrow(Supplier<? extends X> exceptionSupplier) | 값이 존재하면 해당 값을 반환.<br />값이 존재하지 않으면 인수로 전달된 예외를 발생. |
 
+## 참고 자료
+https://www.daleseo.com/java8-optional-after/
