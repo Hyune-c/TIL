@@ -1,6 +1,6 @@
 # JVM Memory
 
-![](../image/Java/JVM Memory_JVM1.png)
+![](../image/Java/JVM%20Memory_JVM1.png)
 
 ![JVM Runtime Data Area](https://user-images.githubusercontent.com/55722186/74124316-29f27080-4c15-11ea-9c62-5af7769c2c73.png)
 
