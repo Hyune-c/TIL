@@ -2,7 +2,7 @@
 
 <img src="../image/Java/JVM%20Memory_JVM1.png" width="50%" alt=""><img src="../image/Java/JVM%20Memory_JVM2.png" width="50%" alt="">
 
-## Memory Area
+## Runtime Data Area
 
 ### Method
 - 모든 스레드가 공유하는 영역
