@@ -21,17 +21,33 @@
 - Optional 사용시 get() 사용 지양 (강제 Unwrapping) ... complete
 - lombok 을 통한 logging 간소화 ... complete
 
+
+### # Handlebars
+https://github.com/Hyune-c/TIL/blob/master/Spring/Handlebars.md
+
+### # log 가독성 높이기
+- log4j2.properties
+```
+appender.console.layout.pattern=%style{%d{yyyy-MM-dd hh:mm:ss:SSS}} %highlight{%-5level }[%style{%t}{bright,blue}] %style{%C{1.}}{bright,yellow}: %msg%n%throwable"
+```
+
+- Grep Console 
+    - 커스텀 하이라이트 가능
+
 ### # 기능 구현
+- Handlebars 전환 ... compelte
+- 초기 데이터 만들기 
+    - .../resource/data.sql 생성 ... complete
 - 로그인 기능 구현
-    - 로그인 상태이면 상단 메뉴에 “로그아웃”, “개인정보수정” 이 나타나야 합니다.
-    - 로그아웃 상태이면 상단 메뉴에 “로그인”, “회원가입” 이 나타나야 한다.
+    - 로그인 상태이면 상단 메뉴에 “로그아웃”, “개인정보수정” 이 나타나야 합니다. ... complete
+    - 로그아웃 상태이면 상단 메뉴에 “로그인”, “회원가입” 이 나타나야 한다. ... complete
 - 개인정보 수정
-    - 이름, 이메일은 수정할 수 있으며, 아이디는 수정할 수 없습니다.
-    - 글 수정은 비밀번호가 일치하는 경우에만 가능합니다.
+    - 이름, 이메일은 수정할 수 있으며, 아이디는 수정할 수 없습니다. ... complete
+    - 글 수정은 비밀번호가 일치하는 경우에만 가능합니다. ... complete
 - 질문 기능 구현 실습
-    - 질문은 모두가 볼 수 있습니다.
-    - 질문 작성은 로그인한 사용자만 가능합니다.
-    - 글 수정/삭제는 자신의 것만 가능합니다.
+    - 질문은 모두가 볼 수 있습니다. ... complete
+    - 질문 작성은 로그인한 사용자만 가능합니다. ... complete
+    - 글 수정/삭제는 자신의 것만 가능합니다. ... working
 - User와 Question 연결 실습(선택)
     - 현재 Question의 글쓴이는 User의 name 값을 가지는 것으로 구현했다.  
     이와 같이 구현하는 경우 User의 name을 수정하는 경우 Question의 글쓴이와 다른 값을 가지는 문제가 발생한다.  
@@ -41,7 +57,4 @@
     - 답변 목록은 모두가 볼 수 있습니다.
     - 답변 작성은 로그인한 사용자만 가능합니다.
     - 답변 삭제는 자신의 것만 가능합니다.    
-
-### 질문
-- Controller 에 있는 repository 는 static 으로 선언할 필요가 없나요? 
 
