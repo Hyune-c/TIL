@@ -1,6 +1,5 @@
 # Error Page
 
-
 ## ErrorController 를 implements 하는 방식
 - ErrorController 를 구현하는 CustomErrorController 를 만들어 에러에 동적으로 대응할 수 있습니다. 
 
@@ -46,6 +45,28 @@ public String update(@PathVariable long id, User newUser) {
   ...
 }
 ```  
+
+## @ControllerAdvice 를 통해 구현하는 방식
+- @ControllerAdvice 와 @ExceptionHandler 를 통해 프로그램 전체의 에러를 처리할 수 있습니다.
+
+```java
+@ControllerAdvice
+public class CustomErrorController {
+
+  // 사용자 정의 에러 처리
+  @ExceptionHandler(UserException.class)
+  public String userException(Exception e, Model model) {
+    ...
+  }
+    
+  // 디폴트 에러 처리
+  @ExceptionHandler(Exception.class)
+  public String defaultException(Exception e, HttpStatus httpStatus, Model model) {
+    ... 
+  }
+}
+```
+
 ## 참고 자료
 https://velog.io/@godori/spring-boot-error  
 https://supawer0728.github.io/2019/04/04/spring-error-handling/
