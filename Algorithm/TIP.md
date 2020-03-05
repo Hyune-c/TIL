@@ -1,6 +1,6 @@
 # TIP
 
-### # 변수 다루기
+## # 변수 다루기
 #### 매개 변수에서 변수를 계산할 때
 - 변수의 자료형에 따라 (3/2 = 1.0) 으로 계산되면서 의도하지 않은 결과가 나왔습니다.
 - 변수를 계산하여 명시적으로 표기한 후 매개변수로 사용하는 방식을 권장합니다.
@@ -21,7 +21,7 @@ maxDistance = (curDistance > maxDistance) ? curDistance : maxDistance;
 maxDistance = Math.max(curDistance, maxDistance);                     
 ```
 
-### # 문자열, 배열
+## # 문자열, 배열
 #### 같은 문자가 정해진 길이의 문자열을 만들어야 되는 경우
 - StringBuilder 로 만드는 것이 보통이겠지만, 아래와 같이 만드는 방법도 있습니다. 
  
@@ -31,7 +31,7 @@ movedDistance = new String(new char[moveBehavior.getMoveCount(roundCount)]).repl
 movedDistance = (Stream.generate(() -> "-").limit(moveBehavior.getMoveCount(roundCount))).collect(Collectors.joining());
 ```
 
-### # ETC
+## # ETC
 #### 실행 시간 구하기
 ```java
 long start = System.currentTimeMillis();
