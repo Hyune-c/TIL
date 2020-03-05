@@ -17,7 +17,7 @@
 | Better Case | Except Remove() | Remove()     |
 | Allow Null  | No              | Yes          |
 
-![](../image/CS/Data Structure_ArrayDequevsLinkedList.png)
+![](../image/CS/Data%20Structure_ArrayDequevsLinkedList.png)
 
 - 참고 자료  
 http://brianandstuff.com/2016/12/12/java-arraydeque-vs-linkedlist/  
