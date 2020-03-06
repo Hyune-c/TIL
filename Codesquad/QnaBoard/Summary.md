@@ -9,7 +9,7 @@
     - mustache 는 logic-less 를 지향하며, handlebars 는 mustache 의 문법을 수용하며 helper 개념을 통해 로직 처리를 가능하게 해줍니다.
     
 3.  MVC 패턴에서 model view controller 각각의 역할을 이해했는가?
-    - model 은 로직, view 는 보여주는 화면, controller 는 요청에 적합한 컴포넌트 호출을 합니다.
+    - model 은 로직 (무엇을), view 는 보여주는 화면, controller 는 요청에 적합한 컴포넌트 호출을 (어떻게) 합니다.
     - 각각의 개념은 서로의 영역을 침범하지 않습니다.
     
 4. 웹 클라이언트에서 웹 서버에 요청을 보내고, 응답을 받는 흐름을 이해했는가?  
