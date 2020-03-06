@@ -60,7 +60,6 @@ class MyHashMap extends HashMap<Character, Integer> {
 
 ## # Working...
 
-
 ```java
 this.numsQueue = new PriorityQueue<Integer>(new Comparator<Integer>() {  
   public int compare(Integer w1, Integer w2) {  
