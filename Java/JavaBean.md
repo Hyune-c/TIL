@@ -27,7 +27,8 @@ public class SomeBean implements Serializable {
 }
 ```
 
-#### POJO 
+> POJO 
+
 순수한 자바 객체로 객체지향적인 원리에 충실하면서, 환경과 기술에 종속되지 않고 필요에 따라 재활용될 수 있는 방식으로 설계된 오브젝트를 말합니다.  
 POJO 는 개념적인 것으로, 객체가 손상되지 않는다면 일부 변형을 허용합니다. (slightly breaks)
 
