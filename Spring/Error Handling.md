@@ -1,7 +1,7 @@
 # Error Handling
 
 ## ErrorController 를 implements 하는 방식
-- ErrorController 를 구현하는 CustomErrorController 를 만들어 에러에 동적으로 대응할 수 있습니다. 
+ErrorController 를 구현하는 CustomErrorController 를 만들어 에러에 동적으로 대응할 수 있습니다. 
 
 ### # CustomErrorController 예제
  ErrorController 를 구현하여 HttpStatus 에 동적으로 대응할 수 있는 로직을 가지고 있습니다.
@@ -47,7 +47,7 @@ public String update(@PathVariable long id, User newUser) {
 ```  
 
 ## @ControllerAdvice 를 통해 구현하는 방식
-- @ControllerAdvice 와 @ExceptionHandler 를 통해 프로그램 전체의 에러를 처리할 수 있습니다.
+@ControllerAdvice 와 @ExceptionHandler 를 통해 프로그램 전체의 에러를 처리할 수 있습니다.
 
 ```java
 @ControllerAdvice
