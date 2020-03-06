@@ -58,3 +58,32 @@ appender.console.layout.pattern=%style{%d{yyyy-MM-dd hh:mm:ss:SSS}} %highlight{%
     - 답변 작성은 로그인한 사용자만 가능합니다.
     - 답변 삭제는 자신의 것만 가능합니다.    
 
+### # 질문
+
+- 글 작성 날짜를 처리함에 있어 get() 메소드의 수정과 return 값을 변경하는 것이 걸려 @DateTimeFormat 를 활용해보려 했습니다.
+    - 검색을 해보니 mvc configuration 을 만들어주어야 된다는 내용이 있던데.. 시도해보다 실패했습니다.      
+    컴파일 에러는 발생하지 않는데, 필수적으로 설정해야되는 것이 맞나요?
+- 최종적인 목표는 bean 과 DB 안에는 LocalDateTime 형태이고, .hbs 로 출력할때는 지정된 format 으로 나가는 것 입니다. (get 메소드의 조작 없이) 
+    - 아래의 방법은 json 처리를 위한 직렬화 작업이라고 나오던데, 제가 필요없는 접근을 하고 있는 걸까요?   
+
+```java
+  // 원래 소스
+  private LocalDateTime createdDateTime;
+
+  public String getCreatedDateTime() {
+    DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+    return createdDateTime.format(dateTimeFormatter);
+  }
+```
+```java
+  // 의도한 소스
+  @DateTimeFormat(iso = DateTimeFormat.ISO.NONE)
+  private LocalDateTime createdDateTime;
+```
+```java
+  // 검색하여 찾은 get() 메소드 formatting 의 다른 방법
+  @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="dd/MM/yyyy")
+  public LocalDateTime getCreatedDateTime() {
+    return createdDateTime;
+  }
+```
