@@ -1,8 +1,8 @@
 # JavaBean
 JavaBean API Specification 에 따른 Standard 로 POJO 와 아래 조건을 만족하여야됩니다.
 
-- 모든 필드는 private이며, getter/setter메서드를 통해서만 접근 가능합니다.
-- Argument가 없는(no-argument) 생성자가 존재합니다.
+- 모든 필드는 private 이며, getter/setter 메소드를 통해서만 접근 가능합니다.
+- Argument 가 없는 생성자가 존재합니다.
 - java.io.Serializable 인터페이스를 구현합니다.
 
 ```java
