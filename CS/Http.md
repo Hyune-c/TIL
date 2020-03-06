@@ -8,7 +8,6 @@ state less 인 HTTP 의 문제점을 보완하기 위한 방식이지만,
 | -------- | ----------------- | ------------- |
 | Stored   | Browser in Client | Server        |
 | Security | 변조의 위험성     | 탈취의 위험성 |
-|          |                   |               |
 
 ## # 참고 자료
 https://engkimbs.tistory.com/696
