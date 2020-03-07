@@ -71,3 +71,4 @@ public class CustomErrorController {
 https://velog.io/@godori/spring-boot-error  
 https://supawer0728.github.io/2019/04/04/spring-error-handling/
 https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc
+https://springboot.tistory.com/25
