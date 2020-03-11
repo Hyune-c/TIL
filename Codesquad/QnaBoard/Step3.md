@@ -58,15 +58,5 @@ appender.console.layout.pattern=%style{%d{yyyy-MM-dd hh:mm:ss:SSS}} %highlight{%
     - 답변 삭제는 자신의 것만 가능합니다. ... complete
 
 ### # step3 Refactoring
-- validateUserId() 메소드의 이동 ... working
+- validateUserId() 메소드의 이동 ... complete
 - Utils 에서 CommonUtils 로 이름 변경 ... complete 
-
-### # 질문
-- 여러 곳에서 쓰일 수 있는 메소드를 CommonUtils 로 모으다 보니 DB 에 접근할 때가 애매해졌습니다.  
-    - 아래 메소드는 static 이며 Repository 를 매개변수로 전달받게 만들었습니다.
-    - Repository 는 Singleton 이기에 전역에서 접근하려 했는데 @autowired 는 static 적용을 할 수가 없었습니다.
-    - 어쩔 수 없이 매개변수로 전달하는 형태로 구현했는데 의존성 면에서 좋아보이지 않아 고민됩니다.  
-
-```java
-public static Question getQuestion(QuestionRepository questionRepository, Long id) {
-```
