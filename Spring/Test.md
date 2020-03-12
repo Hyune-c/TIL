@@ -5,10 +5,10 @@
 - Test 는 모든 단위가 독립적으로 수행되어야 합니다.
     - `@BeforeEach` 와 `@AfterEach` 를 통해 필요한 내용을 설정하고 원상 복구 시켜야 합니다. 
 
-### # @DataJpaTest
+### @DataJpaTest
 - JPA 테스트에 관련된 설정을 로드합니다.
 - 기본적으로 인메모리 데이터베이스를 이용합니다.
-- 초기 데이터는 Data.sql 등을 통해 일괄적으로 추가합니다.
+- 초기 데이터는 Data.sql 을 통해 일괄적으로 추가합니다.
 
 ```java
 package com.codessquad.qna.user;
@@ -34,7 +34,7 @@ class UserJPATest {
 }
 ``` 
 
-### # @RestClientTest
+### @RestClientTest
 - REST API 테스트에 관련된 설정을 로드합니다.
 - 키워드 : MockRestServiceServer, MockMvc
 
