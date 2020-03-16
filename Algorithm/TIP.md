@@ -1,7 +1,6 @@
 # TIP
 주로 알고리즘을 풀면서 알게된 애매한 실수와 잡기술(?) 을 정리하였습니다. 
 
-##  변수 다루기
 ### # 매개 변수에서 변수를 계산할 때
 - 변수의 자료형에 따라 (3/2 = 1.0) 으로 계산되면서 의도하지 않은 결과가 나왔습니다.
 - 변수를 계산하여 명시적으로 표기한 후 매개변수로 사용하는 방식을 권장합니다.
@@ -47,7 +46,6 @@ movedDistance = (Stream.generate(() -> "-").limit(moveBehavior.getMoveCount(roun
 - 참고 자료
     - https://stackoverflow.com/questions/37972859/java-util-objects-isnull-vs-object-null
 
-## ETC
 ### # 실행 시간 구하기
 ```java
 long start = System.currentTimeMillis();
