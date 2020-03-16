@@ -51,5 +51,5 @@ HTTP/1.1 200 OK
 ```
 #### 참고 자료
 https://engkimbs.tistory.com/696  
-https://velog.io/@pa324/%EA%B0%9C%EB%B0%9C%EC%83%81%EC%8B%9D-URI-URL-%EC%B0%A8%EC%9D%B4-%EC%A0%95%EB%A6%AC
+https://velog.io/@pa324/%EA%B0%9C%EB%B0%9C%EC%83%81%EC%8B%9D-URI-URL-%EC%B0%A8%EC%9D%B4-%EC%A0%95%EB%A6%AC  
 https://developer.mozilla.org/ko/docs/Web/HTTP/Messages
