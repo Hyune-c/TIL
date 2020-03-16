@@ -39,7 +39,7 @@ movedDistance = (Stream.generate(() -> "-").limit(moveBehavior.getMoveCount(roun
     ```
 - 코드의 가독성면에서는 `==` 을, 안정성면에서는 `Object.null()` 을 권장합니다.
     - 안정성면에서는 `Optional` 활용이 제일 좋습니다. 
-    - Objects.null() 은 Lambda 표현식에 최적화되어있습니다.
+    - `Objects.null()` 은 Lambda 표현식에 최적화되어있습니다.
         ```java
         .stream().filter(Objects::isNull) 
         ```
