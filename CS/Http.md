@@ -35,12 +35,18 @@ http://user:pass@www.example.jp:80/dir/index.htm
 ## Request, Response
 ![](../image/CS/Http%20Reqeust_Response.png)
 
-- empty line : CR(carriage return, 0x0d) + LF(line feed, 0x0a)
+### HTTP Headers
+- 각 값들은 CR(carriage return, 0x0d) + LF(line feed, 0x0a) 를 기준으로 값이 나뉩니다.
+
+### HTTP Body
+- `empty line` 을 기준으로 나뉩니다.
+- 한줄로 연속된 데이터를 가지고 있습니다. 
+ 
 ### # Request
 - start line, request line
 ```
 POST / HTTP/1.1
-메소드 URI 프로토콜버전
+메소드 요청URL 프로토콜버전
 ```
 
 ### # Response
