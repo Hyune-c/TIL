@@ -1,5 +1,5 @@
 # Collection Framework 자료구조
-![Java Collection Framework](https://user-images.githubusercontent.com/55722186/74129897-113d8700-4c24-11ea-83c2-6a1e6cc93c29.png)
+<img src="https://user-images.githubusercontent.com/55722186/74129897-113d8700-4c24-11ea-83c2-6a1e6cc93c29.png" width="80%">
 
 | Interface  |       | Desc                                                 | 구현 클래스                                      |
 | ---------- | ----- | ---------------------------------------------------- | ------------------------------------------------ |
