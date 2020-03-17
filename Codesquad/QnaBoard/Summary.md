@@ -28,23 +28,39 @@
     - ORM (Object Relational Mapping)    
     - 사물을 추상화시켜 이해하려는 OOP 사고방식과 DataModel 을 정형화하여 관리하려는 RDB 사이를 연결할 계층의 역할로 제시된 패러다임으로 RDB 의 모델을 OOP 에 Entity 형태로 투영시키는 방식을 사용한다. 
     
-- ORM 기반으로 CRUD 기능을 구현할 수 있는가?
+8. ORM 기반으로 CRUD 기능을 구현할 수 있는가?
     - CrudRepository 를 상속받는 Repository 를 만들어 @autowired 를 통해 할당하고 사용합니다.
 
-- HTTP는 무상태 프로토콜이라는 말의 의미를 이해했는가?
+9. HTTP는 무상태 프로토콜이라는 말의 의미를 이해했는가?
     - HTTP 1.0 은 비연결성을 특징으로 가지고 있으며, 이 때문에 클라이언트의 상태를 알 수 없기에 stateless 입니다.
 
-- HTTP는 상태를 유지하기 위해 cookie를 사용한다. cookie의 동작 방식을 이해했는가?
+10. HTTP는 상태를 유지하기 위해 cookie를 사용한다. cookie의 동작 방식을 이해했는가?
     - https://github.com/Hyune-c/TIL/blob/master/CS/Http.md
 
-- cookie와 session의 차이점은 무엇인지 이해했는가?
+11. cookie와 session의 차이점은 무엇인지 이해했는가?
     - https://github.com/Hyune-c/TIL/blob/master/CS/Http.md
 
-- Spring MVC에서 Session을 활용해 로그인 기반 개발이 가능한가?
+12. Spring MVC에서 Session을 활용해 로그인 기반 개발이 가능한가?
     - HttpSession 을 활용합니다.
 
-- Logging 라이브러리 필요성을 이해했는가?
+13. Logging 라이브러리 필요성을 이해했는가?
     - 네.
 
-- Logging 라이브러리를 설정할 수 있는가?
+14. Logging 라이브러리를 설정할 수 있는가?
     - https://github.com/Hyune-c/TIL/blob/master/Spring/Logging.md
+
+15. ORM과 JPA의 관계, JPA와 Hibernate의 관계에 대해 이해했는가?
+
+16. JPA 기반으로 자바 객체와 테이블 매핑이 가능한가?
+
+17. JPA 매핑에서 fetchtype으로 Eager, Lazy가 있다. 이 둘의 차이점을 이해했는가?
+
+18. AJAX의 필요성을 이해하고 있는가?
+
+19. 웹 서버에서 HTML과 JSON으로 응답할 때의 차이점을 이해했는가?
+
+20. 서버에서 JSON으로 응답하고, 클라이언트에서 AJAX로 기능을 구현하는 것이 가능한가?
+
+21. 웹 백엔드와 모바일 백엔드가 같다는 말의 의미를 이해했는가?
+
+22. Maven, Gradle과 같은 빌드 도구의 역할에 대해 이해했는가?
