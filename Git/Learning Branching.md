@@ -1,0 +1,35 @@
+# Learning Branching
+
+https://learngitbranching.js.org/
+
+## 메인
+### # git 기본
+1. Git 커밋 소개
+    - 커밋은 Git 저장소에 파일에 대한 스냅샷을 기록합니다. 
+        - 디렉토리 전체를 복사하거나 변경분만 저장하는 것이 아닙니다.
+    - 커밋은 부모 커밋을 가리킵니다.
+        - delte : 이전 버전과 다음 버전의 변경 내역
+          
+2. Git 에서 브랜치 쓰기
+    - branch 는 특정 커밋에 대한 참조로 하나의 커밋과 그 부모 커밋들을 포함하는 작업 내역입니다. 
+
+3. Git 에서 브랜치 합치기(Merge)
+    - Git 의 merge 는 두 개의 parent 를 가리키는 특별한 커밋을 만들어 냅니다. 
+        - 한 부모의 모든 작업내역과 나머지 부모의 모든 작업, 그리고 그 두 부모의 모든 부모들의 작업내역을 포함합니다.
+    - `master > git merge bugfix`
+    master branch 에서 실행하며 bugfix branch 를 master branch 로 merge 합니다.
+
+4. 리베이스(rebase)의 기본
+    - branch 의 head 를 이동시키는 것으로 merge 보다 강력하고 간결하지만 잘못된 작업시 복구가 어려울 수 있습니다.
+    - `bugfix > git rebase master`
+    bugfix branch 에서 실행하며 bugfix branch 를 master branch 의 다음으로 rebase 합니다.
+    
+
+### # 다음 단계로
+
+### # 코드 이리저리 옮기기
+
+### # 종합선물세트
+
+### # 고급 문제
+
