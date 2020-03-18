@@ -50,6 +50,7 @@ https://learngitbranching.js.org/
     
 2. 인터랙티브 리베이스 소개
     - `rebase -i` 옵션을 통해 여러개의 커밋을 조작할 수 있습니다.
+    - `rebase -i master~4`
 
 ### # 종합선물세트
 - `rebase -i` 또는 `cherry-pick` 을 통해 가능합니다.
@@ -69,6 +70,32 @@ https://learngitbranching.js.org/
     - 같은 branch 에서의 rebase 는 새로운 commit 을 만들지 않습니다.
 
 2. 다수의 부모
+    - 한번에 한 커밋 위로 움직이는 `^ (캐럿)` 을 사용할 때 merge 로 인해 다수의 부모가 있는 경우 `^2` 를 이용함으로서 다른 부모를 선택할 수 있습니다.
+    - 명령어를 합칠 도 있습니다.  
+    `git checkout HEAD~^2~2`
 
+3. 브랜치 스파게티
+       
+## 원격
+### Push & Pull -- Git 원격 저장소!
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+    
+### "origin"그 너머로 -- 고급 Git 원격 저장소
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+    
 
 
