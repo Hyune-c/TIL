@@ -45,8 +45,30 @@ https://learngitbranching.js.org/
         - `C0 - C1 - C2(*)` -> `C0 - C1 - C2 - C2'(*)`
 
 ### # 코드 이리저리 옮기기
+1. Cherry-pick 소개
+    - 현재 위치(HEAD) 아래에 있는 일련의 커밋들에 대한 복사본을 만드는 것입니다.
+    
+2. 인터랙티브 리베이스 소개
+    - `rebase -i` 옵션을 통해 여러개의 커밋을 조작할 수 있습니다.
 
 ### # 종합선물세트
+- `rebase -i` 또는 `cherry-pick` 을 통해 가능합니다.
+- `commit --amend` 로 커밋 메세지를 수정할 수 있습니다.
+1. 딱 한개의 커밋만 가져오기
+2. 커밋들 갖고 놀기
+3. 커밋 갖고 놀기 #2
+4. Git 태그
+    - `git tag tagName branchName`
+5. Git describe(묘사)
+    - `git describe branchName`
+    - 가장 가까운 tag 로 부터의 거리를 출력합니다.
 
 ### # 고급 문제
+1. 9천번이 넘는 리베이스
+    - 다른 branch 에서의 rebase 는 새로운 commit 을 만듭니다.
+    - 같은 branch 에서의 rebase 는 새로운 commit 을 만들지 않습니다.
+
+2. 다수의 부모
+
+
 
