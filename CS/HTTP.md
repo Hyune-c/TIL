@@ -54,7 +54,7 @@ HTTP/1.1 200 OK
 
 - HTTP Response Status Codes  [링크](https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Response%20Status%20Codes.md)
 
-### # HTTP Headers
+### # HTTP Headers [링크](https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Headers.md)
 - 일반 헤더 (General Header)
     - 요청/응답 모두에서 사용 가능한 일반 목적의 항목입니다.
     
@@ -69,9 +69,7 @@ HTTP/1.1 200 OK
 
 ### # HTTP Body
 - `empty line` 을 기준으로 나뉩니다.
-- 한줄로 연속된 데이터를 가지고 있습니다. 
- 
-
+- 한 줄로 연속된 데이터를 가지고 있습니다. 
 
 #### 참고 자료
 https://engkimbs.tistory.com/696  
