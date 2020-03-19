@@ -29,9 +29,10 @@ http://user:pass@www.example.jp:80/dir/index.htm?uid=1#ch1
 scheme:[//[user:password@]host[:port]][/]path[?query][#fragment]
 스키마://자격정보@서버주소:서버포트/계층적 파일 패스?쿼리 문자열#프래그먼트 식별자
 ```
+
 > URL
 ```
-http://user:pass@www.example.jp:80/dir/index.htm 
+http://user:pass@www.example.jp:80/dir/index.htm
 ```
 
 ## Request, Response
@@ -54,7 +55,7 @@ POST / HTTP/1.1
 - Response : status line
 
 ```
-HTTP/1.1 200 OK 
+HTTP/1.1 200 OK
 프로토콜버전 상태코드 상태코드설명
 ```
 
@@ -71,7 +72,7 @@ HTTP/1.1 200 OK
 - 응답 헤더 (Response Header)
   - 특정 유형의 HTTP 요청/헤더를 수신했을때, 이에 응답합니다.
 
-- 엔터티/개체 헤더 (Entity Header) 
+- 엔터티/개체 헤더 (Entity Header)
   - 요청/응답 모두에서 사용가능하며, 개체를 설명합니다.
 
 ### HTTP Body
@@ -81,6 +82,6 @@ HTTP/1.1 200 OK
 
 #### 참고 자료
 
-<https://engkimbs.tistory.com/696>
+<https://engkimbs.tistory.com/696>  
 <https://velog.io/@pa324/개발상식-URI-URL-차이-정리>
 <https://developer.mozilla.org/ko/docs/Web/HTTP/Messages>
