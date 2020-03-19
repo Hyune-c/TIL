@@ -83,5 +83,5 @@ HTTP/1.1 200 OK
 #### 참고 자료
 
 <https://engkimbs.tistory.com/696>  
-<https://velog.io/@pa324/개발상식-URI-URL-차이-정리>
+<https://velog.io/@pa324/개발상식-URI-URL-차이-정리>  
 <https://developer.mozilla.org/ko/docs/Web/HTTP/Messages>
