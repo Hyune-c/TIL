@@ -18,7 +18,7 @@ stateless 의 문제점을 보완하기 위한 방식이지만, 두 방식 모�
 - URL (Uniform Resource Locator) 은 자원의 위치을 뜻합니다.
 - URN (Uniform Resource Name) 은 위치와 상관없이 리소스의 이름값을 이용해서 접근합니다.
 
-#### URI 포맷
+### URI 포맷
 
 > URI
 ```
@@ -37,9 +37,9 @@ http://user:pass@www.example.jp:80/dir/index.htm
 
 - Header 와 Body 는  `CR(carriage return, 0x0d) + LF(line feed, 0x0a)` 를 기준으로 값이 나뉩니다.
 
-### # HTTP Method [링크](https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Method.md)
+### HTTP Method [링크](https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Method.md)
 
-### # Start line
+### Start line
 - Request : request line
 ```
 POST / HTTP/1.1
@@ -54,7 +54,7 @@ HTTP/1.1 200 OK
 
 - HTTP Response Status Codes  [링크](https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Response%20Status%20Codes.md)
 
-### # HTTP Headers [링크](https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Headers.md)
+### HTTP Headers [링크](https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Headers.md)
 - 일반 헤더 (General Header)
     - 요청/응답 모두에서 사용 가능한 일반 목적의 항목입니다.
     
@@ -67,7 +67,7 @@ HTTP/1.1 200 OK
 - 엔터티/개체 헤더 (Entity Header) 
     - 요청/응답 모두에서 사용가능하며, 개체를 설명합니다.
 
-### # HTTP Body
+### HTTP Body
 - `empty line` 을 기준으로 나뉩니다.
 - 한 줄로 연속된 데이터를 가지고 있습니다. 
 
