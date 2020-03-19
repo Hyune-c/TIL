@@ -1,4 +1,4 @@
-# Http
+# HTTP
 
 Http 는 상태를 유지하지 않는 stateless 한 프로토콜 입니다.
 
