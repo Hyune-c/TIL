@@ -35,8 +35,13 @@ http://user:pass@www.example.jp:80/dir/index.htm
 ## Request, Response
 ![](../image/CS/Http%20Reqeust_Response.png)
 
+- Header 와 Body 는  `CR(carriage return, 0x0d) + LF(line feed, 0x0a)` 를 기준으로 값이 나뉩니다.
+
+### # HTTP Method
+https://github.com/Hyune-c/TIL/blob/master/CS/HTTP%20Method.md
+
 ### # HTTP Headers
-- 각 값들은 CR(carriage return, 0x0d) + LF(line feed, 0x0a) 를 기준으로 값이 나뉩니다.
+
 
 ### # HTTP Body
 - `empty line` 을 기준으로 나뉩니다.
