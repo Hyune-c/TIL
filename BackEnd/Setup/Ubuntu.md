@@ -27,7 +27,10 @@
 
 3. remote 에 ssh 설치 (이미 설치했다면 생략 가능)
    - openssh 설치 여부 확인
-    `dpkg -l | grep openssh`
+  
+    ```shell script
+    dpkg -l | grep openssh
+    ```
 
    - openssh 설치
 
