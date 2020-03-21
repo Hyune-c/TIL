@@ -1,10 +1,10 @@
 # Setting
 
-## SpringBoot
+## Spring Initializr
 
 [링크](https://start.spring.io/)
 
-## H2 DB 설정
+## H2 DB
 
 - build.gradle
 
@@ -30,19 +30,43 @@ spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
 ```
 
-## logback 설정
+## logback
 
 SpringBoot 에는 기본 설정이 되어 있습니다.
 
 - application.properties
 
 ```java
-## logging 레벨 설정
-logging.level.root=info
+# profile 설정
+spring.profiles.active=dev
 ```
 
+- application-dev.properties
+
+```java
+# logging level 설정
+logging.level.root=info
+logging.level.com.codesquad.signup=debug
+
+# log file path
+logging.file.path=./logs
+logging.file.name=${logging.file.path}/dev_log.log
+
+# logging pattern
+logging.pattern.file=%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{36}.%M - %msg%n
+logging.pattern.console=%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n
+```
+
+## Heroku
+
+- Deploy - Automatic deploys enable
+- Manual deploy - master
+- More - View Logs
+  
 ## 참고 자료
 
+- logback
+  - <https://lankydan.dev/2019/01/09/configuring-logback-with-spring-boot>
 - log4j2
   - <https://logging.apache.org/log4j/2.x/maven-artifacts.html>
   - <https://howtodoinjava.com/log4j2/log4j2-properties-example/>
