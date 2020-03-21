@@ -1,5 +1,7 @@
 # Mysql
 
+> MySql 5.7
+
 ## mysql 설치하기
 
 1. mysql version 확인
@@ -13,9 +15,11 @@ mysql-server-5.7 - MySQL database server binaries and system database setup
 
 2. 설치
 
-`sudo apt-get install mysql-server-5.7`
+   ```shell script
+   sudo apt-get install mysql-server-5.7
+   ```
 
-3. root 비밀번호 설정
+`1. root 비밀번호 설정
 
 > mysql 접속 방법이 기존 패스워드 방식에서 우분투 18.04 부터 auth_socket 플러그인을 이용하는 방식으로 변경되었습니다.
 아래는 이를 패스워드 방식으로 변경하고 기본 비밀번호를 'root' 로 설정하는 스크립트입니다.
