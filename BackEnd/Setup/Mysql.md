@@ -20,7 +20,7 @@ mysql-server-5.7 - MySQL database server binaries and system database setup
 > mysql 접속 방법이 기존 패스워드 방식에서 우분투 18.04 부터 auth_socket 플러그인을 이용하는 방식으로 변경되었습니다.
 아래는 이를 패스워드 방식으로 변경하고 기본 비밀번호를 'root' 로 설정하는 스크립트입니다.
 
-```
+```shell script
 dan@dan_ubuntu:~$ sudo mysql
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 4
