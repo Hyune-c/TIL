@@ -6,6 +6,8 @@ codesquad masters project 1
 
 - #1 프로젝트 기반 준비하기 [링크](https://github.com/Hyune-c/signup/issues/1)
 
+## Ground Rule [링크](https://github.com/Hyune-c/signup/wiki/Groud-Rule)
+
 ## Setting
 
 ### # 구성 자원
@@ -16,12 +18,6 @@ codesquad masters project 1
 
 ### # Heroku
 
-- dev
 - master [링크](https://codesquad-signup.herokuapp.com/)
-
-### # Ground Rule [링크](https://github.com/Hyune-c/signup/wiki/Groud-Rule)
-
-### # Repository [링크](https://github.com/Hyune-c/signup/wiki/Groud-Rule)
-
-### # StringBoot [링크](https://github.com/Hyune-c/TIL/blob/master/Spring/Setting.md)
-
+- dev
+  

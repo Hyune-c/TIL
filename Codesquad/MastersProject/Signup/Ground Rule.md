@@ -7,17 +7,14 @@
 
 ## # Issue
 
-### 회고
-
-- 키워드와 함께 작성하고, 완성되면 Wiki 로 이동합니다.
-
-### Label
-
-- feature, 회고
-
-### 제목 : 내용
-
-- 구현 기능 요약 : 체크박스가 포함된 상세 구현 기능
+- 제목
+  - 구현 기능 요약
+- 내용
+  - 체크박스가 포함된 상세 구현 기능
+  - 재가공된 참고할 문서
+- Label
+  - feature
+  - 회고 : 키워드와 함께 작성하고, 완성되면 Wiki 로 이동합니다.
 
 ## # Branch
 
@@ -31,15 +28,13 @@
 
 > ### Header
 
-#### Commit Type
+- Commit Type
+  - feat : 새로운 기능 추가
+  - refactor : 코드 리팩토링
+  - properties : 설정 변경과 문서 변경
 
-- feat : 새로운 기능 추가
-- refactor : 코드 리팩토링
-- properties : 설정 변경과 문서 변경
-
-#### Subject
-
-변경된 내용 요약
+- Subject
+  - 변경된 내용 요약
 
 > ### Body
 
@@ -51,14 +46,6 @@
 - #이슈번호
 
 ```text
-Commit Type : Subject
-
-Body
-
-Footer
-```
-
-```text
 feat : index page 구현
 
 - index.java : returnIndex()
@@ -67,7 +54,7 @@ feat : index page 구현
 #1
 ```
 
-## PR Guide
+## # PR Guide
 
 > ### Title
 
