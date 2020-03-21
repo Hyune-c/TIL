@@ -1,9 +1,11 @@
 # Error Handling
 
 ## ErrorController 를 implements 하는 방식
-ErrorController 를 구현하는 CustomErrorController 를 만들어 에러에 동적으로 대응할 수 있습니다. 
+
+ErrorController 를 구현하는 CustomErrorController 를 만들어 에러에 동적으로 대응할 수 있습니다.
 
 ### # CustomErrorController 예제
+
  ErrorController 를 구현하여 HttpStatus 에 동적으로 대응할 수 있는 로직을 가지고 있습니다.
 
 ```java
@@ -28,7 +30,7 @@ public class CustomErrorController implements ErrorController {
 
 ### # Exception() 발생 예제
 
-- ForbiddenException   
+- ForbiddenException
  403 HTTP 에러를 나타내는 클래스 입니다.
 
 ```java
@@ -68,6 +70,7 @@ public class CustomErrorController {
 ```
 
 ## 참고 자료
+
 https://velog.io/@godori/spring-boot-error  
 https://supawer0728.github.io/2019/04/04/spring-error-handling/
 https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc
