@@ -1,4 +1,4 @@
-# Setup
+# Ubuntu
 
 ## Ubuntu 설치하기
 
