@@ -67,7 +67,7 @@ feat : index page 구현
 ### # Step 1 기능 구현 완료
 
 - [x] Index 파일 읽기  
-- [x] 회원가입 구현 
-- [x] 로그인 구현 
-- [x] 사용자 목록 페이지 구현 
-- [x] Stylesheet 지원 구현 
+- [x] 회원가입 구현
+- [x] 로그인 구현
+- [x] 사용자 목록 페이지 구현
+- [x] Stylesheet 지원 구현

@@ -109,13 +109,13 @@ configurations {
     ...
     all {
         // log4j2 로깅 설정 : 중복되는 logging 제거
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging' 
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
     }
     ...
 }
 
 dependencies {
-    ... 
+    ...
     // log4j2 로깅 설정
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.0'
     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.0'

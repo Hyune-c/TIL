@@ -2,7 +2,8 @@
 
 ## lombok + Slf4j
 
--  build.gradle
+- build.gradle
+
 ```properties
 configurations {
     ...
@@ -27,30 +28,33 @@ dependencies {
 
 - lombok plugin 설치
 
-![](../image/Spring/Logging_lombokPlugin.png)
+![Logging_lombokPlugin](../image/Spring/Logging_lombokPlugin.png)
 
 - Annotation Processors `Enable`
 
 File > Settings > Build, Execution, Deployment > Compiler > Annotation Processors
-![](../image/Spring/Logging_AnnotationEnable.png)
+![Logging_AnnotationEnable](../image/Spring/Logging_AnnotationEnable.png)
 
 - lombok.config 를 통해 세부 설정이 가능합니다.
 
-#### Test Code
+### Test Code
+
 ```java
 @Slf4j
 @SpringBootApplication
 public class QnaApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(QnaApplication.class, args);
-		log.info("Simple log statement with inputs {}, {} and {}", 1, 2, 3);
-	}
+ public static void main(String[] args) {
+  SpringApplication.run(QnaApplication.class, args);
+  log.info("Simple log statement with inputs {}, {} and {}", 1, 2, 3);
+ }
 }
 
 2020-02-26 21:59:14 INFO  QnaApplication:13 - Simple log statement with inputs 1, 2 and 3
 ```
+
 ## 참고 자료
-https://projectlombok.org/setup/gradle  
-https://stackoverflow.com/questions/9424364/cant-compile-project-when-im-using-lombok-under-intellij-idea  
-https://howtodoinjava.com/spring-boot2/logging/logging-with-lombok/
+
+<https://projectlombok.org/setup/gradle>  
+<https://stackoverflow.com/questions/9424364/cant-compile-project-when-im-using-lombok-under-intellij-idea>  
+<https://howtodoinjava.com/spring-boot2/logging/logging-with-lombok/>
