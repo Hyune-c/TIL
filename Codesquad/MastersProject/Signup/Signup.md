@@ -15,6 +15,7 @@ codesquad masters project 1
 - SpringBoot (Web, Data JDBC)
 - Java 1.8
 - H2 Database 1.4.200
+- Lombok 1.18.8
 
 ### # Heroku
 
