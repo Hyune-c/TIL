@@ -319,6 +319,29 @@ ubuntu@ip-172-31-39-101:~/build$ tree
 ...
 ```
 
+4. 실행
+
+```shell script
+ubuntu@ip-172-31-39-101:~/build$ ./gradlew bootRun
+
+> Task :bootRun
+LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1318180415
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.5.RELEASE)
+
+23-03-2020 18:08:44.063 [main] INFO  com.codesquad.signup.SignupApplication.logStarting - Starting SignupApplication on ip-172-31-39-101 with PID 2227 (/home/ubuntu/build/build/classes/java/main started by ubuntu in /home/ubuntu/build)
+```
+
+5. Test Url
+
+<http://ec2-52-79-241-239.ap-northeast-2.compute.amazonaws.com:8080/api/users/testOk>  
+<http://ec2-52-79-241-239.ap-northeast-2.compute.amazonaws.com:8080/api/users/testFail>
 ## 참고 자료
 
 <https://jojoldu.tistory.com/281>
