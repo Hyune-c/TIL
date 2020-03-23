@@ -111,21 +111,20 @@
 
 ## WorkBeanch 로 접속하기
 
-mysql 
+```shell script
+# mysql 접속
+mysql -u root -p
+
+# Create User & Grant PRIVILEGES
 CREATE USER 'dan'@`%` IDENTIFIED BY 'dan;
-
 CREATE DATABSE dan_db;
-
 GRANT ALL ON dan_db.* TO 'dan'@'%' WITH GRANT OPTION;
-
 FLUSH PRIVILEGES;
 
-sudo service mysql restart;
-
-netstat -an | grep 3306
-
+# local 외에서 접속이 필요한 경우 bind-address 를 주석 처리
 vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
-```java
-# bind-address          = 127.0.0.1
+# mysql Restart
+sudo service mysql restart;
+netstat -an | grep 3306
 ```
