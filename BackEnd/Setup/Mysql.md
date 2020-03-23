@@ -111,6 +111,8 @@
 
 ## WorkBeanch 로 접속하기
 
+- remote Ubuntu 에서 설정
+
 ```shell script
 # mysql 접속
 mysql -u root -p
@@ -124,7 +126,7 @@ FLUSH PRIVILEGES;
 # local 외에서 접속이 필요한 경우 bind-address 를 주석 처리
 vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
-# mysql Restart
+# mysql restart
 sudo service mysql restart;
 netstat -an | grep 3306
 ```
