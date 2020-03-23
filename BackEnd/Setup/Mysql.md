@@ -111,6 +111,7 @@
 
 ## WorkBeanch 로 접속하기
 
+mysql 
 CREATE USER 'dan'@`%` IDENTIFIED BY 'dan;
 
 CREATE DATABSE dan_db;
@@ -120,6 +121,8 @@ GRANT ALL ON dan_db.* TO 'dan'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 sudo service mysql restart;
+
+netstat -an | grep 3306
 
 vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
