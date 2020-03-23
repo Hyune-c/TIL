@@ -236,6 +236,11 @@ files:
        1. 태그를 입력하여 `1개의 일치하는 고유한 인스턴스.` 가 나옴을 확인합니다.
 3. 개발자 도구 > CodeDeploy > 애플리케이션 > signup-5 > 배포 생성
 
+### # 배포 Error
+
+![error1](./image/2020-03-24-02-45-57.png)
+![error2](./image/2020-03-24-02-46-32.png)
+
 ## 참고 자료
 
 <https://jojoldu.tistory.com/281>
