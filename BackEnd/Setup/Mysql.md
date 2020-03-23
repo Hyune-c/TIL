@@ -109,7 +109,7 @@
    ...
    ```
 
-## 접속하기
+## WorkBeanch 로 접속하기
 
 CREATE USER 'dan'@`%` IDENTIFIED BY 'dan;
 
@@ -118,3 +118,11 @@ CREATE DATABSE dan_db;
 GRANT ALL ON dan_db.* TO 'dan'@'%' WITH GRANT OPTION;
 
 FLUSH PRIVILEGES;
+
+sudo service mysql restart;
+
+vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+```java
+# bind-address          = 127.0.0.1
+```
