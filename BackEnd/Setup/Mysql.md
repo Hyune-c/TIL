@@ -108,3 +108,13 @@
    Conn.  characterset:	utf8
    ...
    ```
+
+## 접속하기
+
+CREATE USER 'dan'@`%` IDENTIFIED BY 'dan;
+
+CREATE DATABSE dan_db;
+
+GRANT ALL ON dan_db.* TO 'dan'@'%' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;

@@ -18,11 +18,11 @@
 
 ## # Branch
 
-|        | Local                  | Orgin                                                                 |
-| ------ | ---------------------- | --------------------------------------------------------------------- |
-| URL    |                        | <https://github.com/Hyune-c/signup>                                   |  |
-| Branch | 개인                     | 개인, dev, master                                                       |
-| Rule   | - 개인의 Branch 에서 개발합니다. | - 완성된 feature 를 dev 에 PR 하여 테스트 합니다.<br>- dev 를 통과하면 master 에 PR 합니다. |
+|        | Local                                     | Orgin                                                |
+| ------ | ----------------------------------------- | ---------------------------------------------------- | --- |
+| URL    |                                           | <https://github.com/codesquad-memeber-2020/signup-5> |     |
+| Branch | Feature                                   | Dev, Master                                          |
+| Rule   | 완성된 Feature 를 Origin:Dev 에 PR 하여 테스트 합니다. | - Origin:Dev 를 통과하면 Origin:Master 에 PR 합니다.          |
 
 ## # 커밋 메세지 가이드
 
