@@ -77,7 +77,7 @@ ssh -i "signup-5.pem" root@ec2-52-79-241-239.ap-northeast-2.compute.amazonaws.co
 
 2. java8 설치
 
-> 아래 과정은 root 가 아닌 ubuntu 계정 (user) 으로 설치합니다.
+> 아래 과정은 ubuntu 계정 (user) 으로 진행합니다.
 
 ```shell script
 # apt-get update
@@ -141,7 +141,7 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 ### # Code Deploy Agent 설치
 
-> 아래 과정은 root 가 아닌 ubuntu 계정 (user) 으로 설치합니다.
+> 아래 과정은 ubuntu 계정 (user) 으로 진행합니다.
 
 1. Install AWS Command Line Interface
 
