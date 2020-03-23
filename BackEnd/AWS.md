@@ -94,12 +94,15 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 ### # Code Deploy 그룹 추가
 
-1. IAM > 엑세스 관리 > 그룹 > 새로운 그룹 생성
-   1. 단계 1 : 그룹 이름
-      1. signup-5
-   2. 단계 2 : 정책 연결
-   3. 단계 3 : 검토
-2. IAM > 그룹 > signup-5 > 권한 > 인라인 정책 > "여기" > 사용자 지정 정책
+> IAM > 엑세스 관리 > 그룹 > 새로운 그룹 생성
+
+1. 단계 1 : 그룹 이름
+   1. signup-5
+2. 단계 2 : 정책 연결
+3. 단계 3 : 검토
+
+> IAM > 그룹 > signup-5 > 권한 > 인라인 정책 > "여기" > 사용자 지정 정책
+
    1. 정책 검토
 
 ```shell script
@@ -127,15 +130,16 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 ### # Code Deploy 사용자 추가
 
-1. IAM > 엑세스 관리 > 사용자 > 사용자 추가
-   1. 세부 정보
-      1. 사용자 이름 : Dan
-      2. 액세스 유형 : 프로그래밍 방식 액세스
-   2. 권한
-      1. signup-5 그룹에 추가
-   3. 태그
-   4. 검토
-   5. 완료
+> IAM > 엑세스 관리 > 사용자 > 사용자 추가
+
+1. 세부 정보
+   1. 사용자 이름 : Dan
+   2. 액세스 유형 : 프로그래밍 방식 액세스
+2. 권한
+   1. signup-5 그룹에 추가
+3. 태그
+4. 검토
+5. 완료
 
 > credentials.csv 파일을 다운 받습니다.
 
@@ -225,21 +229,95 @@ files:
 
 ### # Code Deploy Application 생성
 
-1. 개발자 도구 > CodeDeploy > 애플리케이션 > 애플리케이션 생성
-   1. 애플리케이션 이름 : signup-5
-   2. 컴퓨팅 플랫폼 : EC2/온프레미스
-2. 개발자 도구 > CodeDeploy > 애플리케이션 > signup-5 > 배포 그룹 생성
-    1. 배포 그룹 이름 : signup-5_Deploy_Group
-    2. 서비스 역할 : arn:aws:iam::040326442355:role/signup-5_deploy
-       1. 자동 완성 됩니다.
-    3. 환경 구성 : Amazon EC2 인스턴스
-       1. 태그를 입력하여 `1개의 일치하는 고유한 인스턴스.` 가 나옴을 확인합니다.
-3. 개발자 도구 > CodeDeploy > 애플리케이션 > signup-5 > 배포 생성
+> 개발자 도구 > CodeDeploy > 애플리케이션 > 애플리케이션 생성
 
-### # 배포 Error
+1. 애플리케이션 이름 : signup-5
+2. 컴퓨팅 플랫폼 : EC2/온프레미스
 
-![error1](./image/2020-03-24-02-45-57.png)
-![error2](./image/2020-03-24-02-46-32.png)
+### # Code Deploy 배포 그룹 생성
+
+> 개발자 도구 > CodeDeploy > 애플리케이션 > signup-5 > 배포 그룹 생성
+
+ 1. 배포 그룹 이름 : signup-5_Deploy_Group
+ 2. 서비스 역할 : arn:aws:iam::040326442355:role/signup-5_deploy
+    1. 자동 완성 됩니다.
+ 3. 환경 구성 : Amazon EC2 인스턴스
+    1. 태그를 입력하여 `1개의 일치하는 고유한 인스턴스.` 가 나옴을 확인합니다.
+
+### # Code Deploy 배포 생성
+
+> 개발자 도구 > CodeDeploy > 애플리케이션 > signup-5 > 배포 생성
+
+1. Git Token 을 만들고 배포하고자 하는 커밋 ID 를 가져옵니다.
+
+### # 배포 성공 후 gradle build 하기
+
+1. 배포된 소스
+
+```shell script
+buntu@ip-172-31-39-101:~/build$ ls -lrt
+total 40
+-rw-rw-r-- 1 root root   28 Mar 24 02:48 settings.gradle
+-rw-rw-r-- 1 root root 2942 Mar 24 02:48 gradlew.bat
+-rwxrwxr-x 1 root root 5764 Mar 24 02:48 gradlew
+-rw-rw-r-- 1 root root  820 Mar 24 02:48 build.gradle
+-rw-rw-r-- 1 root root   82 Mar 24 02:48 appspec.yml
+-rw-rw-r-- 1 root root  403 Mar 24 02:48 README.md
+-rw-rw-r-- 1 root root 1138 Mar 24 02:48 HELP.md
+drwxr-xr-x 4 root root 4096 Mar 24 02:50 src
+drwxr-xr-x 3 root root 4096 Mar 24 02:50 gradle
+```
+
+2. gradle build
+
+```shell script
+ubuntu@ip-172-31-39-101:~/build$ ./gradlew build
+Downloading https://services.gradle.org/distributions/gradle-6.2.2-bin.zip
+.........10%.........20%.........30%..........40%.........50%.........60%..........70%.........80%.........90%..........100%
+
+Welcome to Gradle 6.2.2!
+
+Here are the highlights of this release:
+ - Dependency checksum and signature verification
+ - Shareable read-only dependency cache
+ - Documentation links in deprecation messages
+
+For more details see https://docs.gradle.org/6.2.2/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Task :test
+23-03-2020 17:54:11.292 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+23-03-2020 17:54:11.309 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+23-03-2020 17:54:11.310 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+
+BUILD SUCCESSFUL in 2m 24s
+5 actionable tasks: 5 executed
+ubuntu@ip-172-31-39-101:~/build$
+```
+
+3. Tree 를 통해 class 파일이 생성됨을 확인
+
+```shell script
+ubuntu@ip-172-31-39-101:~/build$ tree
+.
+├── HELP.md
+├── README.md
+├── appspec.yml
+├── build
+│   ├── classes
+│   │   └── java
+│   │       ├── main
+│   │       │   └── com
+│   │       │       └── codesquad
+│   │       │           └── signup
+│   │       │               ├── SignupApplication.class
+│   │       │               ├── api
+│   │       │               │   └── UserApi.class
+│   │       │               └── common
+│   │       │                   └── Result.class
+...
+```
 
 ## 참고 자료
 
