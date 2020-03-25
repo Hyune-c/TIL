@@ -2,88 +2,124 @@
 
 웹 애플리케이션 배치 모델로 사용되는 여러 프로그래밍 언어를 지원하는 클라우드 PaaS 입니다.
 
+아래는 `https://github.com/codesquad-memeber-2020/signup-5.git` 의 `dev` branch 를 Heroku 의 `signup-5-dev` 의 `master` branch 올리고 기동하는 스크립트입니다.
+
 ## Setting
+
+- `dev` branch local 로 받기
+
+```shell script
+> git clone -b dev --single-branch https://github.com/codesquad-memeber-2020/signup-5.git signup-5-dev
+> cd signup-5-dev
+```
 
 - install CLI
 
 ```shell script
-brew tap heroku/brew && brew install heroku
+> brew tap heroku/brew && brew install heroku
 ```
 
 - login
 
+키를 받거나
+
 ```shell script
-heroku login
+> heroku authorizations:create
+Creating OAuth Authorization... done
+Client:      <none>
+ID:          *********-a0d1-446c-a714-*********
+Description: Long-lived user authorization
+Scope:       global
+Token:       *********-cbd8-4453-a445-*********
+Updated at:  Wed Mar 25 2020 02:43:18 GMT+0900 (GMT+09:00) (less than a minute ago)
 ```
 
-- create repository
+Browser 를 통해 로그인 합니다.
 
 ```shell script
-# gradle buildpack 을 가져옵니다.
- heroku create signup-5-test --buildpack https://github.com/heroku/heroku-buildpack-gradle.git
-Creating ⬢ signup-5-test... done
-Setting buildpack to https://github.com/heroku/heroku-buildpack-gradle.git... done
-https://signup-5-test.herokuapp.com/ | https://git.heroku.com/signup-5-test.git
+> heroku login
+```
+
+- create Heroku App
+
+```shell script
+> heroku create signup-5-dev
 ```
 
 - remote setting
 
 ```shell script
- heroku git:remote -a signup-5-test
-set git remote heroku to https://git.heroku.com/signup-5-test.git
- choibyunghyeon  ~/Documents/github/codesquad/signup-5/BE/signup   server/feature/user-join >R>
- git remote -v
-heroku	https://git.heroku.com/signup-5-test.git (fetch)
-heroku	https://git.heroku.com/signup-5-test.git (push)
+> heroku git:remote -a signup-5-dev
+> git remote -v
+heroku	https://git.heroku.com/signup-5-dev.git (fetch)
+heroku	https://git.heroku.com/signup-5-dev.git (push)
 origin	https://github.com/codesquad-memeber-2020/signup-5.git (fetch)
 origin	https://github.com/codesquad-memeber-2020/signup-5.git (push)
 ```
 
-- push
-
-> Error 발생!!!!!!!!
+- deploy
 
 ```shell script
- git push heroku server/feature/user-join:master
-Enumerating objects: 146, done.
-Counting objects: 100% (146/146), done.
+> git subtree push --prefix BE/signup/ heroku master
+git push using:  heroku master
+Enumerating objects: 333, done.
+Counting objects: 100% (333/333), done.
 Delta compression using up to 8 threads
-Compressing objects: 100% (105/105), done.
-Writing objects: 100% (146/146), 89.86 KiB | 7.49 MiB/s, done.
-Total 146 (delta 25), reused 49 (delta 3)
+Compressing objects: 100% (144/144), done.
+Writing objects: 100% (333/333), 89.93 KiB | 17.99 MiB/s, done.
+Total 333 (delta 96), reused 300 (delta 94)
 remote: Compressing source files... done.
 remote: Building source:
 remote:
-remote: -----> App not compatible with buildpack: https://github.com/heroku/heroku-buildpack-gradle.git
-remote:        Could not find a 'gradlew' script or a 'build.gradle' file! Please check that they exist and are commited to Git.
+remote: -----> Gradle app detected
+remote: -----> Spring Boot detected
+remote: -----> Installing JDK 1.8... done
+remote: -----> Building Gradle app...
+remote: -----> executing ./gradlew build -x test
+remote:        Downloading https://services.gradle.org/distributions/gradle-6.2.2-all.zip
+remote:        .............10%.............20%.............30%..............40%.............50%.............60%.............70%..............80%.............90%.............100%
+remote:        To honour the JVM settings for this build a new JVM will be forked. Please consider using the daemon: https://docs.gradle.org/6.2.2/userguide/gradle_daemon.html.
+remote:        Daemon will be stopped at the end of the build stopping after processing
+remote:        > Task :compileJava
+remote:        > Task :processResources
+remote:        > Task :classes
+remote:        > Task :bootJar
+remote:        > Task :jar SKIPPED
+remote:        > Task :assemble
+remote:        > Task :check
+remote:        > Task :build
 remote:
-remote:        More info: https://devcenter.heroku.com/articles/buildpacks#detection-failure
+remote:        BUILD SUCCESSFUL in 43s
+remote:        3 actionable tasks: 3 executed
+remote: -----> Discovering process types
+remote:        Procfile declares types     -> (none)
+remote:        Default types for buildpack -> web
 remote:
-remote:  !     Push failed
-remote: Verifying deploy...
+remote: -----> Compressing...
+remote:        Done: 71.5M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://signup-5-dev.herokuapp.com/ deployed to Heroku
 remote:
-remote: !	Push rejected to signup-5-test.
-remote:
-To https://git.heroku.com/signup-5-test.git
- ! [remote rejected] server/feature/user-join -> master (pre-receive hook declined)
-error: failed to push some refs to 'https://git.heroku.com/signup-5-test.git'
+remote: Verifying deploy... done.
+To https://git.heroku.com/signup-5-dev.git
+ * [new branch]      3f6084865c0da460bec19a2e4e69ebd5cf8937b3 -> master
 ```
 
-> gradlew, build.gradle 이 해당 경로에 있음은 확인 됨
+- ssh 로 Heroku App 접속
 
 ```shell script
- choibyunghyeon  ~/Documents/github/codesquad/signup-5/BE/signup   server/feature/user-join >R>
- ls -lrt
-total 40
-drwxr-xr-x  3 choibyunghyeon  staff    96  3 23 15:30 gradle
--rwxr-xr-x  1 choibyunghyeon  staff  5764  3 23 15:30 gradlew
--rw-r--r--  1 choibyunghyeon  staff  2942  3 23 15:30 gradlew.bat
--rw-r--r--  1 choibyunghyeon  staff    28  3 23 15:30 settings.gradle
-drwxr-xr-x  4 choibyunghyeon  staff   128  3 23 15:30 src
-drwxr-xr-x  8 choibyunghyeon  staff   256  3 23 15:36 build
--rw-r--r--  1 choibyunghyeon  staff   901  3 23 15:46 build.gradle
-drwxr-xr-x  4 choibyunghyeon  staff   128  3 24 03:25 logs
+> heroku ps:exec -a signup-5-dev
 ```
+
+- Tip
+  - Server time Setting
+
+    ```shell script
+    Heroku 사이트에서
+    Setting > Config Vars 에 추가
+    TZ : Asia/Seoul
+    ```
 
 ## 참고 자료
 
