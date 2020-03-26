@@ -44,6 +44,7 @@ Browser 를 통해 로그인 합니다.
 
 ```shell script
 > heroku create signup-5-dev
+> heroku apps:destroy signup-5-dev
 ```
 
 - remote setting
@@ -116,11 +117,24 @@ To https://git.heroku.com/signup-5-dev.git
   - Server time Setting
 
     ```shell script
-    Heroku 사이트에서
-    Setting > Config Vars 에 추가
-    TZ : Asia/Seoul
+    > heroku config:set TZ=Asia/Seoul
     ```
 
 ## 참고 자료
 
 <https://www.a-mean-blog.com/ko/blog/%EB%8B%A8%ED%8E%B8%EA%B0%95%EC%A2%8C/_/Heroku-%ED%97%A4%EB%A1%9C%EC%BF%A0-%EA%B0%80%EC%9E%85-Heroku-CLI-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B0%84%EB%8B%A8-%EC%82%AC%EC%9A%A9%EB%B2%95>
+
+
+
+git clone -b dev --single-branch https://github.com/codesquad-memeber-2020/signup-5.git signup-5-dev
+
+cd signup-5-dev
+
+heroku apps:destroy signup-5-dev
+signup-5-dev
+heroku create signup-5-dev
+heroku config:set TZ=Asia/Seoul
+
+heroku git:remote -a signup-5-dev
+
+git subtree push --prefix BE/signup/ heroku master
