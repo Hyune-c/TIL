@@ -40,11 +40,11 @@ Browser 를 통해 로그인 합니다.
 > heroku login
 ```
 
-- create Heroku App
+- destroy/create Heroku App
 
 ```shell script
-> heroku create signup-5-dev
 > heroku apps:destroy signup-5-dev
+> heroku create signup-5-dev
 ```
 
 - remote setting
