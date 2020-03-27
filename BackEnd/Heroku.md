@@ -120,21 +120,28 @@ To https://git.heroku.com/signup-5-dev.git
     > heroku config:set TZ=Asia/Seoul
     ```
 
+- 요약
+
+> 아래 스크립트 실행시 local 의 소스가 올라갑니다.
+
+```shell script
+> rm -rf signup-5-dev
+
+> git clone -b dev --single-branch https://github.com/codesquad-memeber-2020/signup-5.git signup-5-dev
+
+> cd signup-5-dev
+
+> heroku apps:destroy signup-5-dev
+# signup-5-dev 입력
+
+> heroku create signup-5-dev
+> heroku config:set TZ=Asia/Seoul
+
+> heroku git:remote -a signup-5-dev
+
+> git subtree push --prefix BE/signup/ heroku master
+```
+
 ## 참고 자료
 
 <https://www.a-mean-blog.com/ko/blog/%EB%8B%A8%ED%8E%B8%EA%B0%95%EC%A2%8C/_/Heroku-%ED%97%A4%EB%A1%9C%EC%BF%A0-%EA%B0%80%EC%9E%85-Heroku-CLI-%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EA%B0%84%EB%8B%A8-%EC%82%AC%EC%9A%A9%EB%B2%95>
-
-
-
-git clone -b dev --single-branch https://github.com/codesquad-memeber-2020/signup-5.git signup-5-dev
-
-cd signup-5-dev
-
-heroku apps:destroy signup-5-dev
-signup-5-dev
-heroku create signup-5-dev
-heroku config:set TZ=Asia/Seoul
-
-heroku git:remote -a signup-5-dev
-
-git subtree push --prefix BE/signup/ heroku master

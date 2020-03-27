@@ -32,9 +32,9 @@ HTTP 응답 상태 코드는 특정 HTTP 요청이 성공적으로 완료되었�
 
 | Status Code | Reason Message | Name    | Desc                                   | Desc2 |
 | ----------- | -------------- | ------- | -------------------------------------- | ----- |
-| 400         | Bad Request    | 잘못된 요청  | Syntax 가 맞지 않아 해석이 안되는 경우              |       |
+| 400         | Bad Request    | 잘못된 요청  | Request 가 해석되지 않는 경우                   |       |
 | 401         | Unauthorized   | 권한 없음   | 실제 뜻은 인증 안됨(Unauthenticated)에 더 가깝습니다. |       |
-| 403         | Foebidden      | 금지됨     | Request 가 해석은 되지만 권한이 없는 경우            |       |
+| 403         | Foebidden      | 금지됨     | Request 는 정상이지만 권한이 없는 경우              |       |
 | 404         | Not Found      | 찾을 수 없음 |                                        |       |
 
 ### Server errors
