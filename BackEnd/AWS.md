@@ -1,5 +1,65 @@
 # AWS
 
+## Practice Todo
+
+### # 루트 계정 2중 잠금 설정
+
+### # admin 계정 만들기
+
+[참고자료](https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/getting-started_create-admin-group.html)
+
+1. 페이지 상단의 내 ID > 내 계정 > 결제 정보에 대한 IAM 사용자 및 역할 액세스 `활성화`
+
+2. 서비스 > IAM > 엑세스 관리 > 사용자 > 사용자 추가
+    - 세부 정보
+      - 사용자 이름 : Administrator
+      - AWS 액세스 유형 선택
+        - 액세스 유형 : AWS Management Console 액세스
+    - 권한
+      - 권한 설정 > 그룹 생성
+        - AdministratorAccess 정책 선택하여 그룹 생성
+    - 태그
+      - Name : Administrator
+    - credentials.csv 다운로드
+
+### # power user 계정 만들기
+
+[참고자료](https://kc.mcafee.com/corporate/index?page=content&id=KB83814)
+
+1. PowerUser 로 그룹 생성
+   - PowerUserAccess 정책 선택
+2. PowerUser 로 사용자 생성
+   - Administrator 와 동일
+   - 사용자 이름 : PowerUser
+   - Name : PowerUser
+
+### ec2 생성 (우분투로) 및 ssh 접속 성공하기
+
+> 인스턴스 시작 선택  
+> IAM 설정은 생략하였습니다.
+
+1. Amazon Machine Image 선택
+   - Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
+2. 인스턴스 유형 선택
+   - 유형 : t2.micro (프리 티어 사용 가능)
+3. 태그 추가
+   - name : Dust-5
+4. 보안 그룹 구성
+
+| 유형            | 프로토콜 | 포트 범위 | 소스        | 설명          |
+| ------------- | ---- | ----- | --------- | ----------- |
+| SSH           | TCP  | 22    | (Default) | SSH         |
+| HTTP          | TCP  | 80    | (Default) | HTTP        |
+| 사용자 지정 TCP 규칙 | TCP  | 8080  | (Default) | Spring Boot |
+
+5. 키 생성
+    - aws_Dust-5
+    - aws_Dust-5.pem 다운로드
+
+### (옵션) 스프링 부트 띄워보기
+
+> 아래의 항목은 수정 대기 중입니다.
+
 ## Code Deploy 만들기
 
 ### # IAM Setting (인스턴스)
