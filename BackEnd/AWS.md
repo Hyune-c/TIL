@@ -4,6 +4,8 @@
 
 ### # 루트 계정 2중 잠금 설정
 
+2중 잠금이 무엇일까요..? MFA 설정인건가요?
+
 ### # admin 계정 만들기
 
 [참고자료](https://docs.aws.amazon.com/ko_kr/IAM/latest/UserGuide/getting-started_create-admin-group.html)
@@ -33,40 +35,15 @@
    - 사용자 이름 : PowerUser
    - Name : PowerUser
 
-### ec2 생성 (우분투로) 및 ssh 접속 성공하기
+### # ec2 생성 (우분투로) 및 ssh 접속 성공하기
 
-> 인스턴스 시작 선택  
-> IAM 설정은 생략하였습니다.
-
-1. Amazon Machine Image 선택
-   - Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
-2. 인스턴스 유형 선택
-   - 유형 : t2.micro (프리 티어 사용 가능)
-3. 태그 추가
-   - name : Dust-5
-4. 보안 그룹 구성
-
-| 유형            | 프로토콜 | 포트 범위 | 소스        | 설명          |
-| ------------- | ---- | ----- | --------- | ----------- |
-| SSH           | TCP  | 22    | (Default) | SSH         |
-| HTTP          | TCP  | 80    | (Default) | HTTP        |
-| 사용자 지정 TCP 규칙 | TCP  | 8080  | (Default) | Spring Boot |
-
-5. 키 생성
-    - aws_Dust-5
-    - aws_Dust-5.pem 다운로드
-
-### (옵션) 스프링 부트 띄워보기
-
-> 아래의 항목은 수정 대기 중입니다.
+> Code Deploy 에 같이 설명
 
 ## Code Deploy 만들기
 
-### # IAM Setting (인스턴스)
+> IAM > 엑세스 관리 > 역할
 
-> IAM 역할은 신뢰하는 개체에 권한을 부여하는 안전한 방법입니다.
-
-#### 역할 만들기
+### # EC 에 할당할 역할 생성
 
 1. 신뢰
     - AWS 서비스 - EC2
@@ -76,94 +53,101 @@
     - AWSCodeDeployRole
     - CloudWatchLogsFullAccess
 3. 태그
-    - Dan : Dan
+    - Name : Dust-5_EC2_Deploy
 4. 검토
-    - codesquad Signup-5
+    - Dust-5_EC2_Deploy
 
 ### # 인스턴스 생성
 
-> 인스턴스 시작 선택
-
-1. AMI 선택
+1. Amazon Machine Image 선택
    - Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
 2. 인스턴스 유형 선택
    - 유형 : t2.micro (프리 티어 사용 가능)
 3. 인스턴스 구성
-    - IAM 역할 : Signup-5
-4. 스토리지 추가
-5. 태그 추가
-   - name : Signup-5
-6. 보안 그룹 구성
+   - IAM 역할 : Dust-5_EC2_Deploy
+4. 태그 추가
+   - name : Dust-5
+5. 보안 그룹 구성
 
 | 유형            | 프로토콜 | 포트 범위 | 소스        | 설명          |
 | ------------- | ---- | ----- | --------- | ----------- |
-| SSH           | TCP  | 22    | (Default) | vpn         |
-| HTTP          | TCP  | 80    | (Default) | http        |
-| 사용자 지정 TCP 규칙 | TCP  | 8080  | (Default) | spring boot |
+| SSH           | TCP  | 22    | (Default) | SSH         |
+| HTTP          | TCP  | 80    | (Default) | HTTP        |
+| 사용자 지정 TCP 규칙 | TCP  | 8080  | (Default) | Spring Boot |
 
-7. 키 생성
-    - singup-5
+5. 키 생성
+    - Dust-5
+    - Dust-5.pem 다운로드
 
 ### # Server Setting
 
-- Connect Instance  
+- root Setting
 
-```shell script
-ssh -i "signup-5.pem" ubuntu@ec2-52-79-241-239.ap-northeast-2.compute.amazonaws.com
-```
-
-1. root Setting
+> 아래 작업 root 접속이 가능합니다.
+> ssh -i "Dust-5.pem" root@ec2-3-34-46-140.ap-northeast-2.compute.amazonaws.com
 
 ```shell script
 # root passwd setting
-ubuntu@ip-172-31-39-101:~$ sudo passwd root
+> sudo passwd root
 Enter new UNIX password:
 Retype new UNIX password:
 passwd: password updated successfully
 
 # root sshd active
-sudo vi /etc/ssh/sshd_config
-## PermitEmptyPasswords yes
+> sudo vi /etc/ssh/sshd_config
+PasswordAuthentication yes
+PermitEmptyPasswords yes
 
 # user 의 인증 key 를 복사해줍니다.
-sudo cp /home/ubuntu/.ssh/authorized_keys /root/.ssh
+> sudo cp /home/ubuntu/.ssh/authorized_keys /root/.ssh
 
 # sshd service restart
-sudo service sshd restart
-
-# exit 후 root 로 접속
-ssh -i "signup-5.pem" root@ec2-52-79-241-239.ap-northeast-2.compute.amazonaws.com
+> sudo service sshd restart
 ```
 
-2. java8 설치
-
-> 아래 과정은 ubuntu 계정 (user) 으로 진행합니다.
+- java8 install
 
 ```shell script
-# apt-get update
-sudo apt-get update
-
-# java8 install
-sudo apt-get install openjdk-8-jdk
-
-ubuntu@ip-172-31-39-101:~$ java -version
+> sudo apt-get update
+> sudo apt-get install openjdk-8-jdk -y
+> java -version
 openjdk version "1.8.0_242"
 OpenJDK Runtime Environment (build 1.8.0_242-8u242-b08-0ubuntu3~18.04-b08)
 OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 ```
 
+- Time
+
+```shell script
+> sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+```
+
+### # 수동 배포
+
+```shell script
+# git clone
+> git clone https://github.com/Hyune-c/signup.git
+
+# gradle 설치
+> sudo apt install gradle
+
+# 서버 시작 (백그라운드에서 시작)
+> ./gradlew build
+> ./gradlew bootRun &
+```
+
+> # 아래는 수정해야 되는 내용들입니다.
+
 ### # Code Deploy 그룹 추가
 
 > IAM > 엑세스 관리 > 그룹 > 새로운 그룹 생성
 
-1. 단계 1 : 그룹 이름
-   1. signup-5
-2. 단계 2 : 정책 연결
-3. 단계 3 : 검토
+- 그룹 이름 : Devops
+- 정책 없음
 
-> IAM > 그룹 > signup-5 > 권한 > 인라인 정책 > "여기" > 사용자 지정 정책
+> IAM > 그룹 > Devops > 권한 > 인라인 정책 > "여기" > 사용자 지정 정책
 
-   1. 정책 검토
+- 정책 검토 : Deploy
 
 ```shell script
 {
@@ -192,40 +176,35 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 > IAM > 엑세스 관리 > 사용자 > 사용자 추가
 
-1. 세부 정보
-   1. 사용자 이름 : Dan
-   2. 액세스 유형 : 프로그래밍 방식 액세스
-2. 권한
-   1. signup-5 그룹에 추가
-3. 태그
-4. 검토
-5. 완료
+- Devops_Administrator 사용자 추가
+  - 액세스 유형 : 프로그래밍 방식 액세스
+- Devops 그룹에 추가
+- Tag
+  - Name : Devops_Administrator
 
 > credentials.csv 파일을 다운 받습니다.
 
 ### # Code Deploy Agent 설치
 
-> 아래 과정은 ubuntu 계정 (user) 으로 진행합니다.
-
 1. Install AWS Command Line Interface
 
 ```shell script
-sudo apt-get install awscli -y
-
-ubuntu@ip-172-31-39-101:~$ aws --version
+> sudo apt-get install awscli -y
+> aws --version
 aws-cli/1.14.44 Python/3.6.9 Linux/4.15.0-1057-aws botocore/1.8.48
 ```
 
 2. AWS CLI Configure
 
 ```shell script
+# Devops_Administrator 의 정보를 입력
 # Access Key : credentials.csv 에 있음
 # Secret Access Key : credentials.csv 에 있음
 # region name : ap-northeast-2 (서울)
 # output format : json
-ubuntu@ip-172-31-39-101:~$ pwd
+> pwd
 /home/ubuntu
-ubuntu@ip-172-31-39-101:~$ sudo aws configure
+> sudo aws configure
 AWS Access Key ID [None]: A***************
 AWS Secret Access Key [None]: dhVK2y*********
 Default region name [None]: ap-northeast-2
@@ -236,28 +215,27 @@ Default output format [None]: json
 
 ```shell script
 # install file download
-wget https://aws-codedeploy-ap-northeast-2.s3.amazonaws.com/latest/install--2020-03-23 16:02:24--  https://aws-codedeploy-ap-northeast-2.s3.amazonaws.com/latest/install
+> wget https://aws-codedeploy-ap-northeast-2.s3.amazonaws.com/latest/install
 
 # `/usr/bin/env: ruby: No such file or directory` 가 뜨는 경우 ruby 설치
-sudo apt-get install ruby
+> sudo apt-get install ruby -y
 
 # install
-sudo ./install auto
+> sudo ./install auto
 
 # ubuntu 계정으로는 실행되지 않습니다.
 # root 계정으로 실행시 정상 작동 합니다.
-root@ip-172-31-39-101:/var/log/aws/codedeploy-agent# sudo service codedeploy-agent restart
-root@ip-172-31-39-101:/var/log/aws/codedeploy-agent# ps -ef | grep codedeploy-agen
-root      1521     1  0 01:43 ?        00:00:00 codedeploy-agent: master 1521
-root      1526  1521  0 01:43 ?        00:00:00 codedeploy-agent: InstanceAgent::Plugins::CodeDeployPlugin::CommandPoller of master 1521
-root      1543  1396  0 01:43 pts/0    00:00:00 grep --color=auto codedeploy-agen
+> sudo service codedeploy-agent status
+> ps -ef | grep codedeploy
+root      8414     1  0 16:12 pts/0    00:00:00 codedeploy-agent: master 8414
+root      8420  8414  0 16:12 pts/0    00:00:00 codedeploy-agent: InstanceAgent::Plugins::CodeDeployPlugin::CommandPoller of master 8414
 
 # build 가 저장될 위치를 생성합니다.
-ubuntu@ip-172-31-39-101:~$ pwd
+> pwd
 /home/ubuntu
-ubuntu@ip-172-31-39-101:~$ ls -lrt
-total 20
-drwxrwxr-x 2 ubuntu ubuntu  4096 Mar 24 01:48 build
+> ls -lrt
+total 4
+drwxrwxr-x 2 ubuntu ubuntu 4096 Mar 28 15:11 build
 ```
 
 4. intellij gradle project 에 생성
@@ -274,48 +252,49 @@ files:
 
 ### # IAM Setting (Code Deploy)
 
-#### 역할 만들기
+> IAM > 엑세스 관리 > 역할
 
 1. 신뢰
     - AWS 서비스 - Code Deploy
 2. 권한
-    - AmazonS3FullAccess
-    - AWSCodeDeployFullAccess
     - AWSCodeDeployRole
-    - CloudWatchLogsFullAccess
 3. 태그
+    - Name : CodeDeploy
 4. 검토
-    - signup-5_deploy
+    - CodeDeploy
 
 ### # Code Deploy Application 생성
 
 > 개발자 도구 > CodeDeploy > 애플리케이션 > 애플리케이션 생성
 
-1. 애플리케이션 이름 : signup-5
+1. 애플리케이션 이름 : Dust-5_Application
 2. 컴퓨팅 플랫폼 : EC2/온프레미스
 
 ### # Code Deploy 배포 그룹 생성
 
-> 개발자 도구 > CodeDeploy > 애플리케이션 > signup-5 > 배포 그룹 생성
+> 개발자 도구 > CodeDeploy > 애플리케이션 > Dust-5_Application > 배포 그룹 생성
 
- 1. 배포 그룹 이름 : signup-5_Deploy_Group
- 2. 서비스 역할 : arn:aws:iam::040326442355:role/signup-5_deploy
+ 1. 배포 그룹 이름 : Dust-5_DeployGroup
+ 2. 서비스 역할 : arn:aws:iam::040326442355:role/CodeDeploy
     1. 자동 완성 됩니다.
  3. 환경 구성 : Amazon EC2 인스턴스
-    1. 태그를 입력하여 `1개의 일치하는 고유한 인스턴스.` 가 나옴을 확인합니다.
+    1. `Name : Dust-5` 태그를 입력하여 `1개의 일치하는 고유한 인스턴스.` 가 나옴을 확인합니다.
+ 4. 배포 설정 : OneAtTime
+ 5. 로드 밸런서 해제
 
 ### # Code Deploy 배포 생성
 
-> 개발자 도구 > CodeDeploy > 애플리케이션 > signup-5 > 배포 생성
+> 개발자 도구 > CodeDeploy > 애플리케이션 > Dust-5_Application
+ > 배포 생성
 
-1. Git Token 을 만들고 배포하고자 하는 커밋 ID 를 가져옵니다.
+1. Git Token 을 만들고 (구글링) 배포하고자 하는 커밋 ID 를 가져옵니다.
 
 ### # 배포 성공 후 gradle build 하기
 
 1. 배포된 소스
 
 ```shell script
-buntu@ip-172-31-39-101:~/build$ ls -lrt
+> ls -lrt
 total 40
 -rw-rw-r-- 1 root root   28 Mar 24 02:48 settings.gradle
 -rw-rw-r-- 1 root root 2942 Mar 24 02:48 gradlew.bat
@@ -405,3 +384,22 @@ LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1
 ## 참고 자료
 
 <https://jojoldu.tistory.com/281>
+
+
+
+
+-- 누락?
+
+> IAM > 엑세스 관리 > 역할
+
+1. 신뢰
+    - AWS 서비스 - EC2
+2. 권한
+    - AmazonS3FullAccess
+    - AWSCodeDeployFullAccess
+    - AWSCodeDeployRole
+    - CloudWatchLogsFullAccess
+3. 태그
+    - Name : Devops
+4. 검토
+    - Devops
