@@ -134,6 +134,41 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 # 서버 시작 (백그라운드에서 시작)
 > ./gradlew build
 > ./gradlew bootRun &
+Downloading https://services.gradle.org/distributions/gradle-6.2.2-bin.zip
+.........10%.........20%.........30%..........40%.........50%.........60%..........70%.........80%.........90%..........100%
+
+Welcome to Gradle 6.2.2!
+
+Here are the highlights of this release:
+ - Dependency checksum and signature verification
+ - Shareable read-only dependency cache
+ - Documentation links in deprecation messages
+
+For more details see https://docs.gradle.org/6.2.2/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+> Task :test
+29-03-2020 08:54:45.904 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+29-03-2020 08:54:45.922 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource.close - HikariPool-1 - Shutdown completed.
+29-03-2020 08:54:45.924 [SpringContextShutdownHook] INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor.shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+
+BUILD SUCCESSFUL in 2m 2s
+5 actionable tasks: 5 executed
+ubuntu@ip-172-31-45-252:~/build/signup$ ./gradlew bootRun
+
+> Task :bootRun
+LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1318180415
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.5.RELEASE)
+
+29-03-2020 08:56:34.148 [main] INFO  com.codesquad.signup.SignupApplication.logStarting - Starting SignupApplication on ip-172-31-45-252 with PID 10317 (/home/ubuntu/build/signup/build/classes/java/main started by ubuntu in /home/ubuntu/build/signup)
 ```
 
 > # 아래는 수정해야 되는 내용들입니다.
