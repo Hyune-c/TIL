@@ -4,7 +4,7 @@
 
 ### # 루트 계정 2중 잠금 설정
 
-2중 잠금이 무엇일까요..? MFA 설정인건가요?
+Google OTP 로 설정 완료
 
 ### # admin 계정 만들기
 
@@ -39,23 +39,7 @@
 
 > Code Deploy 에 같이 설명
 
-## Code Deploy 만들기
-
-> IAM > 엑세스 관리 > 역할
-
-### # EC 에 할당할 역할 생성
-
-1. 신뢰
-    - AWS 서비스 - EC2
-2. 권한
-    - AmazonS3FullAccess
-    - AWSCodeDeployFullAccess
-    - AWSCodeDeployRole
-    - CloudWatchLogsFullAccess
-3. 태그
-    - Name : Dust-5_EC2_Deploy
-4. 검토
-    - Dust-5_EC2_Deploy
+## 수동 배포
 
 ### # 인스턴스 생성
 
@@ -122,7 +106,7 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 > sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 ```
 
-### # 수동 배포
+### # 배포
 
 ```shell script
 # git clone
@@ -171,7 +155,24 @@ LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1
 29-03-2020 08:56:34.148 [main] INFO  com.codesquad.signup.SignupApplication.logStarting - Starting SignupApplication on ip-172-31-45-252 with PID 10317 (/home/ubuntu/build/signup/build/classes/java/main started by ubuntu in /home/ubuntu/build/signup)
 ```
 
-> # 아래는 수정해야 되는 내용들입니다.
+> # 아래는 검토 후 수정해야 되는 내용들입니다.
+
+> IAM > 엑세스 관리 > 역할
+
+### # EC 에 할당할 역할 생성
+
+1. 신뢰
+    - AWS 서비스 - EC2
+2. 권한
+    - AmazonS3FullAccess
+    - AWSCodeDeployFullAccess
+    - AWSCodeDeployRole
+    - CloudWatchLogsFullAccess
+3. 태그
+    - Name : Dust-5_EC2_Deploy
+4. 검토
+    - Dust-5_EC2_Deploy
+
 
 ### # Code Deploy 그룹 추가
 
