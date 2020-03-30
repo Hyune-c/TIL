@@ -14,10 +14,11 @@ public static void main(String[] args) {
 
 ```shell script
 # 파일 위치
-ubuntu@ip-172-31-39-57:~$ pwd
+ pwd
 /home/ubuntu
+
 # 소스 내용
-ubuntu@ip-172-31-39-57:~$ cat deploy.sh
+cat deploy.sh
 PID=$(<./dust-5/bin/shutdown.pid)
 GIT_REPO="https://github.com/codesquad-member-2020/dust-5.git"
 kill $PID
@@ -26,6 +27,7 @@ git clone -b $1 --single-branch $GIT_REPO
 cd dust-5
 ./gradlew build
 ./gradlew bootRun &
+
 # 사용법
-ubuntu@ip-172-31-39-57:~$ ./deploy.sh be/dev
+> ./deploy.sh be/dev
 ```
