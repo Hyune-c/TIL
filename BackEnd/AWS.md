@@ -68,7 +68,7 @@ Google OTP 로 설정 완료
 - root Setting
 
 > 아래 작업 root 접속이 가능합니다.  
-> ssh -i "Dust-5.pem" root@ec2-3-34-46-140.ap-northeast-2.compute.amazonaws.com
+> ssh -i "Dust-5.pem" ubuntu@52.78.167.59
 
 ```shell script
 # root passwd setting
@@ -110,10 +110,7 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 
 ```shell script
 # git clone
-> git clone https://github.com/Hyune-c/signup.git
-
-# gradle 설치
-> sudo apt install gradle
+> git clone -b be/dev --single-branch https://github.com/codesquad-member-2020/dust-5.git
 
 # 서버 시작 (백그라운드에서 시작)
 > ./gradlew build
