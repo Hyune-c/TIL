@@ -100,7 +100,7 @@ OpenJDK Runtime Environment (build 1.8.0_242-8u242-b08-0ubuntu3~18.04-b08)
 OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 ```
 
-- Time
+- time
 
 ```shell script
 > sudo ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
