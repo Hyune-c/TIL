@@ -67,7 +67,7 @@ Google OTP 로 설정 완료
 
 - root Setting
 
-> 아래 작업 root 접속이 가능합니다.
+> 아래 작업 root 접속이 가능합니다.  
 > ssh -i "Dust-5.pem" root@ec2-3-34-46-140.ap-northeast-2.compute.amazonaws.com
 
 ```shell script
