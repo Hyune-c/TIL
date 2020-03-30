@@ -14,11 +14,11 @@ public static void main(String[] args) {
 
 ```shell script
 # 파일 위치
- pwd
+> pwd
 /home/ubuntu
 
 # 소스 내용
-cat deploy.sh
+> cat deploy.sh
 PID=$(<./dust-5/bin/shutdown.pid)
 GIT_REPO="https://github.com/codesquad-member-2020/dust-5.git"
 kill $PID
