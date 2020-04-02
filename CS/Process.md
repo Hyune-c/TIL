@@ -30,15 +30,15 @@
 
 ### disown
 
-- 프로세스를 job control에서 제외합니다
-  - 터미널 종료시 SIGHUP을 보내지 않습니다
+- 프로세스를 job control 에서 제외합니다
+  - 터미널 종료시 SIGHUP 을 보내지 않습니다
   - stdout 은 연결되어있습니다
 
 ### nohup
 
 - 터미널과 프로세스의 연결을 끊습니다
-  - 터미널 종료시 SIGHUP을 보내지 않습니다
-  - stdout 을 nohup.out으로 redirect 합니다
+  - 터미널 종료시 SIGHUP 을 보내지 않습니다
+  - stdout 을 nohup.out 으로 redirect 합니다
 
 ## 터미널과 독립적인 프로세스를 만드는 방법
 
