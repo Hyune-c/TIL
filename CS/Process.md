@@ -38,8 +38,7 @@
 
 - 터미널과 프로세스의 연결을 끊습니다
   - 터미널 종료시 SIGHUP을 보내지 않습니다
-  - stdout 을 nohup.out으로 리다이렉팅합니다
-  - stdout 의 연결도 끊어집니다
+  - stdout 을 nohup.out으로 redirect 합니다
 
 ## 터미널과 독립적인 프로세스를 만드는 방법
 
