@@ -26,7 +26,7 @@ rm -rf dust-5
 git clone -b $1 --single-branch $GIT_REPO
 cd dust-5
 ./gradlew build
-./gradlew bootRun &
+nohup ./gradlew bootRun &
 
 # 사용법
 > ./deploy.sh be/dev
