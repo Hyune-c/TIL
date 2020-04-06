@@ -7,7 +7,7 @@
 1. mysql version 확인
 
    ```shell script
-   dan@dan_ubuntu:~$ sudo apt-cache search mysql-server
+   > sudo apt-cache search mysql-server
    ...
    mysql-server-5.7 - MySQL database server binaries and system database setup
    ...
@@ -16,7 +16,7 @@
 2. 설치
 
    ```shell script
-   sudo apt-get install mysql-server-5.7
+   > sudo apt-get install mysql-server-5.7
    ```
 
 3. root 비밀번호 설정
@@ -25,7 +25,7 @@
 아래는 이를 패스워드 방식으로 변경하고 기본 비밀번호를 'root' 로 설정하는 스크립트입니다.
 
    ```shell script
-   dan@dan_ubuntu:~$ sudo mysql
+   > sudo mysql
    Welcome to the MySQL monitor.  Commands end with ; or \g.
    Your MySQL connection id is 4
    Server version: 5.7.29-0ubuntu0.18.04.1 (Ubuntu)
@@ -56,7 +56,7 @@
 4. root 접속 확인
 
    ```shell script
-   dan@dan_ubuntu:~$ mysql -u root -p
+   > mysql -u root -p
    Enter password:
    ...
    mysql>
@@ -96,7 +96,13 @@
    default-character-set = utf8
    ```
 
-3. characterset 확인
+3. mysql 재시작
+
+   ```shell script
+   > sudo /etc/init.d/mysql restart
+   ```
+
+4. characterset 확인
 
    ```shell script
    mysql> status
@@ -115,18 +121,22 @@
 
 ```shell script
 # mysql 접속
-mysql -u root -p
+> mysql -u root -p
 
 # Create User & Grant PRIVILEGES
-CREATE USER 'dan'@`%` IDENTIFIED BY 'dan;
-CREATE DATABSE dan_db;
-GRANT ALL ON dan_db.* TO 'dan'@'%' WITH GRANT OPTION;
-FLUSH PRIVILEGES;
+mysql> CREATE USER 'dan'@`%` IDENTIFIED BY 'dan';
+mysql> create database todo_db;
+mysql> show databases;
+mysql> GRANT ALL ON todo_db.* TO 'dan'@'%' WITH GRANT OPTION;
+mysql> FLUSH PRIVILEGES;
+
+# 방화벽 설정
+> sudo ufw allow 3306/tcp
 
 # local 외에서 접속이 필요한 경우 bind-address 를 주석 처리
-vi /etc/mysql/mysql.conf.d/mysqld.cnf
+> sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 
 # mysql restart
-sudo service mysql restart;
-netstat -an | grep 3306
+> sudo service mysql restart;
+> netstat -an | grep 3306
 ```
