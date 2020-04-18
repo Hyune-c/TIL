@@ -10,8 +10,6 @@
 | 역할  | 사용자            | 개발자, App                                             | 자원을 가지고 있는 서버                                                                                                                                              |
 | 정보  |                | - Client ID <br> - Client Secret <br> - Access Token | - Client ID <br> - Client Secret <br> - Authorized redirect URIs <br> - 허용된 권한 (Client_id - user_id - scope) <br> - Authorization code <br> - Access Token |
 
-### # 용어
-
 - Client ID : 어플리케이션 식별자
 - Client Secret : 어플리케이션 비밀번호
 - Authorized redirect URIs : 허용을 위한 Client 의 주소
