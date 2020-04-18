@@ -50,7 +50,7 @@
 
 1. 유효한 Authorization code 인 경우 Server 에서는 사용된 code 를 삭제합니다
 
-2. Server 는 Access Token 을 Client 로 전달해줍니다
+2. Server 는 Access Token 을 Client 로 응답합니다
 
 ## 질문
 
