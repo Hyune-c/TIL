@@ -5,9 +5,11 @@
 > RFC 에는 Authorization Server 로 인증을 담당하는 서버가 따로 있지만,  
 > 아래의 문서에서는 Resource Server 가 같은 역할을 하는 것으로 기록합니다
 
-|     | Resource Owner | Client   | Resouce Server |
-| --- | -------------- | -------- | -------------- |
-| 역할  | 사용자            | 개발자, App | 자원을 가지고 있는 서버  |
+|                                                                                                                                                            | Resource Owner | Client                                               | Resouce Server |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | ---------------------------------------------------- | -------------- |
+| 역할                                                                                                                                                         | 사용자            | 개발자, App                                             | 자원을 가지고 있는 서버  |
+| 정보                                                                                                                                                         |                | - Client ID <br> - Client Secret <br> - Access Token |
+| - Client ID <br> - Client Secret <br> - Authorized redirect URIs <br> - 허용된 권한 (Client_id - user_id - scope) <br> - Authorization code <br> - Access Token |
 
 ### # 용어
 
