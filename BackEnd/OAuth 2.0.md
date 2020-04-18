@@ -49,3 +49,4 @@
 하지만 강의 자료에는 user_id 와의 매칭이 없었습니다
 - 강의자료에 보면 <https://resource.server/?client_id=1&scope=B,C&redirect_uri=https://client/callback> 와 같이 path 의 끝에 `/` 가 들어가고 param 의 시작인 `?` 가 나옵니다
 이는 표준과 다른 것이 맞나요?
+- 서버에 올리지 않고 localhost 에서 테스트할 방법이 있을까요?
