@@ -41,15 +41,7 @@
 1. Owner 는 인지하지 못하지만 Client 로 redirect 를 통해 Authorization code 가 전달됩니다
 2. Client 는 Server 로 Authorization code 을 포함한 Access Token 요청을 합니다
     - <https://resource.server/token?grant_type=authorization_code&code=3&redirect_uri=https://client/callback&client_id=1&client_secret=2>
-3. Server 는 Authorization code 를 보고 발급한 정보가 맞는지 확인합니다
-
-> `Access Token` 으로 이어집니다
-
-### # Access Token
-
-1. 유효한 Authorization code 인 경우 Server 에서는 사용된 code 를 삭제합니다
-
-2. Server 는 Access Token 을 Client 로 응답합니다
+3. Server 는 Authorization code 가 유효하면 Access Token 을 응답하고, 사용한 Authorization code 는 삭제합니다
 
 ## 질문
 
