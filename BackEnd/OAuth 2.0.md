@@ -25,7 +25,7 @@
 
 1. Client 는 Owner 가 Server 로 접근 가능한 URL 을 제공합니다
     - <https://resource.server/?client_id=1&scope=B,C&redirect_uri=https://client/callback>
-2. Client 는 URL 을 통해 Server 로 접근합니다
+2. Owner 는 URL 을 통해 Server 로 접근합니다
    - 로그인이 되어 있지 않다면 Server 에서 Owner 로 로그인 요청을 보냅니다
 3. Server 는 URL 의 client_id 와 redirect_url 을 검사합니다
    - client_id 가 없거나, redirect_url 과 맞지 않다면 작업을 중지합니다
