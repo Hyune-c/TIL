@@ -19,7 +19,7 @@
 
 ## 흐름
 
-> 이하의 문서에서는 Resource Owner 대신 Owner 를, Resource Server 대신 Server 로 표현합니다
+> 이하의 문서에서는 Resource Owner 를 Owner 로, Resource Server 를 Server 로 표현합니다
 
 ### # Resource Owner 의 승인
 
