@@ -39,7 +39,7 @@
 ### # Resource Server 의 승인
 
 1. Owner 는 인지하지 못하지만 Client 로 redirect 를 통해 Authorization code 가 전달됩니다
-2. Client 는 Authorization code 를 포함하여 Access Token 을 얻기 위한 요청을 Server 합니다
+2. Client 는 Server 로 Authorization code 을 포함한 Access Token 요청을 합니다
     - <https://resource.server/token?grant_type=authorization_code&code=3&redirect_uri=https://client/callback&client_id=1&client_secret=2>
 3. Server 는 Authorization code 를 보고 발급한 정보가 맞는지 확인합니다
 
