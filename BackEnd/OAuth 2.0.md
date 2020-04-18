@@ -19,9 +19,9 @@
 
 ## 흐름
 
-### # Resource Owner 의 승인
-
 > 이하의 문서에서는 Resource Owner 대신 Owner 를, Resource Server 대신 Server 로 표현합니다
+
+### # Resource Owner 의 승인
 
 1. Client 는 Owner 가 Server 로 접근 가능한 URL 을 제공합니다
     - <https://resource.server/?client_id=1&scope=B,C&redirect_uri=https://client/callback>
