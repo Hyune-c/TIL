@@ -11,7 +11,7 @@ rm -rf todo-11
 git clone -b $1 --single-branch $GIT_REPO
 sleep 1
 cd todo-11
-./gradlew build
+./gradle build -x test
 sleep 1
 nohup ./gradlew bootRun &
 ```
