@@ -30,19 +30,18 @@
 3. Server 는 URL 의 client_id 와 redirect_url 을 검사합니다
    - client_id 가 없거나, redirect_url 과 맞지 않다면 작업을 중지합니다
 4. Server 는 Owner 에게 Url 에 있는 scope 를 부여할 것인지 확인 요청을 보냅니다
-5. Server 는 Ownere 가 허용시 user_id, Clinet_id, scope 를 저장합니다
+5. Server 는 Owner 가 허용시 user_id, Clinet_id, scope 를 저장하고 rediect URL 을 응답합니다
+   - Location : <https://client/callback?code=3>
+   - 이 때 Authorization code 를 같이 전달합니다
 
 > `Resource Server 의 승인` 으로 이어집니다
 
 ### # Resource Server 의 승인
 
-1. Server 는 Owner 로 rediect 할 URL 응답합니다
-   - Location : <https://client/callback?code=3>
-   - 이 때 Authorization code 를 같이 전달합니다
-2. Owner 는 인지하지 못하지만 redirect 를 통해 Client 로 Authorization code 가 전달됩니다
-3. Client 는 Authorization code 를 포함하여 Access Token 을 얻기 위한 요청을 Server 합니다
+1. Owner 는 인지하지 못하지만 redirect 를 통해 Client 로 Authorization code 가 전달됩니다
+2. Client 는 Authorization code 를 포함하여 Access Token 을 얻기 위한 요청을 Server 합니다
     - <https://resource.server/token?grant_type=authorization_code&code=3&redirect_uri=https://client/callback&client_id=1&client_secret=2>
-4. Server 는 Authorization code 를 보고 발급한 정보가 맞는지 확인합니다
+3. Server 는 Authorization code 를 보고 발급한 정보가 맞는지 확인합니다
 
 > `Access Token` 으로 이어집니다
 
@@ -56,3 +55,5 @@
 
 - (Client 의 입장에서) Authorization code 까지는 Server 에서 준 값을 redirect 하여 오기 때문에 user_id 와의 매칭이 필요 없지만, Access Token 이 발급된 시점에는 해당 Token 이 어떤 user_id 의 것인지 매칭이 필요할 것으로 예상됩니다  
 하지만 강의 자료에는 user_id 와의 매칭이 없었습니다
+- 강의자료에 보면 <https://resource.server/?client_id=1&scope=B,C&redirect_uri=https://client/callback> 와 같이 path 의 끝에 `/` 가 들어가고 param 의 시작인 `?` 가 나옵니다
+이는 표준과 다른 것이 맞나요?
