@@ -12,7 +12,7 @@
 
 - Client ID : Client 식별자, 노출되어도 됨
 - Client Secret : Client 비밀번호, 노출되면 안됨
-- Authorized redirect URIs : 허용을 위한 Client 의 주소
+- Authorized redirect URIs : Resouce Server 에서 저장하는 Client 주소
   - <https://client/callback>
 - Authorization code : Access Token 을 얻기 위한 임시 코드
 - Access Token : Client 에서 사용하는 실 Token
