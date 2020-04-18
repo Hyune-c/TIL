@@ -8,14 +8,14 @@
 |     | Resource Owner | Client                                               | Resouce Server                                                                                                                                             |
 | --- | -------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 역할  | 사용자            | 개발자, App                                             | 자원을 가지고 있는 서버                                                                                                                                              |
-| 정보  |                | - Client ID <br> - Client Secret <br> - Access Token | - Client ID <br> - Client Secret <br> - Authorized redirect URIs <br> - 허용된 권한 (Client_id - user_id - scope) <br> - Authorization code <br> - Access Token |
+| 정보  |                | - Client ID <br> - Client Secret <br> - Access Token | - Client ID <br> - Client Secret <br> - Authorized redirect URIs <br> - 허용된 권한 (Client ID - user_id - scope) <br> - Authorization code <br> - Access Token |
 
-- Client ID : 어플리케이션 식별자
-- Client Secret : 어플리케이션 비밀번호
+- Client ID : Client 식별자, 노출되어도 됨
+- Client Secret : Client 비밀번호, 노출되면 안됨
 - Authorized redirect URIs : 허용을 위한 Client 의 주소
   - <https://client/callback>
-- Authorization code : Access Token 을 가져오기 위한 임시 보안 코드
-- Access Token : 정보를 가져오기 위해 Client 에서 사용하는 실 Token
+- Authorization code : Access Token 을 얻기 위한 임시 코드
+- Access Token : Client 에서 사용하는 실 Token
 
 ## 흐름
 
