@@ -32,7 +32,7 @@
 4. Server 는 Owner 에게 Url 에 있는 scope 를 부여할 것인지 확인 요청을 보냅니다
 5. Server 는 Ownere 가 허용시 user_id, Clinet_id, scope 를 저장합니다
 
-> `Resource Server 의 승인` 으로 연결됩니다
+> `Resource Server 의 승인` 으로 이어집니다
 
 ### # Resource Server 의 승인
 
@@ -44,7 +44,7 @@
     - <https://resource.server/token?grant_type=authorization_code&code=3&redirect_uri=https://client/callback&client_id=1&client_secret=2>
 4. Server 는 Authorization code 를 보고 발급한 정보가 맞는지 확인합니다
 
-> `Access Token` 으로 연결됩니다
+> `Access Token` 으로 이어집니다
 
 ### # Access Token
 
