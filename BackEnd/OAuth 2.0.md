@@ -19,23 +19,6 @@
 - Authorization code : Access Token 을 가져오기 위한 임시 보안 코드
 - Access Token : 정보를 가져오기 위해 Client 에서 사용하는 실 Token
 
-## 보관하는 정보
-
-### Resource Server
-
-- Client ID
-- Client Secret
-- Authorized redirect URIs
-- 허용된 권한 (Client_id - user_id - scope)
-- Authorization code
-- Access Token
-
-### Client
-
-- Client ID
-- Client Secret
-- Access Token
-
 ## 흐름
 
 ### # Resource Owner 의 승인
