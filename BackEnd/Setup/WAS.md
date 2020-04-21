@@ -1,4 +1,29 @@
-# Web Server
+# WAS, Web Application Server
+
+## Tomcat 설치
+
+> Tomcat 의 기본 Port 는 8080 입니다
+
+```shell script
+> sudo apt-cache search
+> sudo apt-get install tomcat8
+> /usr/share/tomcat8/bin/version.sh
+Server version: Apache Tomcat/8.5.39 (Ubuntu)
+```
+
+/usr/share/tomcat8/bin
+
+/var/lib/tomcat8/webapps
+
+sudo service tomcat8 stop
+sudo service tomcat8 start
+
+/var/log/tomcat8
+
+
+
+
+> ## 아래는 검토 후 수정 예정입니다
 
 ## Spring Boot - Apachi Tomcat 연동
 
