@@ -17,6 +17,13 @@ sleep 1
 nohup java -jar ./build/libs/sidedish-08-0.0.1-SNAPSHOT.jar &
 ```
 
+```shell script
+> jps
+2112 Jps
+2073 sidedish-08-0.0.1-SNAPSHOT.jar
+2027 GradleDaemon
+```
+
 ## Usage
 
 ```shell script
