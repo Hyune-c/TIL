@@ -88,7 +88,6 @@
    init_connect = SET NAMES utf8
    character-set-server = utf8
    collation-server = utf8_general_ci
-   default-time-zone = '+9:00'
    lower_case_table_names = 1
 
    [mysqldump]
