@@ -125,10 +125,10 @@
 > mysql -u root -p
 
 # Create User & Grant PRIVILEGES
-mysql> CREATE USER 'dan'@`%` IDENTIFIED BY 'dan';
-mysql> create database todo_db;
+mysql> CREATE USER 'sidedish08'@`%` IDENTIFIED BY 'sidedish08';
+mysql> create database sidedish_db;
 mysql> show databases;
-mysql> GRANT ALL ON todo_db.* TO 'dan'@'%' WITH GRANT OPTION;
+mysql> GRANT ALL ON sidedish_db.* TO 'sidedish08'@'%' WITH GRANT OPTION;
 mysql> FLUSH PRIVILEGES;
 
 # 방화벽 설정
