@@ -39,6 +39,15 @@ bootWar {
 }
 ```
 
+> profile 사용시 Server 에 추가 설정이 필요합니다
+
+```shell script
+> pwd
+/usr/share/tomcat8/bin
+> cat setenv.sh
+export JAVA_OPTS="$JAVA_OPTS -Dspring.profiles.active=prod"
+```
+
 > ## !!! 아래는 검토 후 수정 예정입니다
 > ## !!! 아래는 검토 후 수정 예정입니다
 > ## !!! 아래는 검토 후 수정 예정입니다
