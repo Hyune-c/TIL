@@ -11,19 +11,34 @@
 Server version: Apache Tomcat/8.5.39 (Ubuntu)
 ```
 
-/usr/share/tomcat8/bin
+- /usr/share/tomcat8/bin
+- /var/lib/tomcat8/webapps
+- /var/log/tomcat8
 
-/var/lib/tomcat8/webapps
+## Spring Boot - Tomcat 연동
 
-sudo service tomcat8 stop
-sudo service tomcat8 start
+> Sidedish08Application.java
 
-/var/log/tomcat8
+```java
+@SpringBootApplication
+public class Sidedish08Application extends SpringBootServletInitializer {
+    ...
+}
+```
 
+> build.gradle
 
+```shell script
+plugins {
+    id 'war'
+}
 
+bootWar {
+    archiveFileName = "sidedish08.war"
+}
+```
 
-> ## 아래는 검토 후 수정 예정입니다
+> ## !!! 아래는 검토 후 수정 예정입니다
 
 ## Spring Boot - Apachi Tomcat 연동
 
