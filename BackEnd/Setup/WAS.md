@@ -30,6 +30,7 @@ public class Sidedish08Application extends SpringBootServletInitializer {
 
 ```shell script
 plugins {
+    ...
     id 'war'
 }
 
