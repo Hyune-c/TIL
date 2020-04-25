@@ -57,7 +57,7 @@ public class AuthProperties {
   private String clientId;
   @Value("${auth.client-secret}")
   private String clientSecret;
-  ... (Getter, Setter)
+  ... (Getter)
 }
 ```
 
