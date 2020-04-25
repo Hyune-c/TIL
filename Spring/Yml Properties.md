@@ -41,8 +41,8 @@ spring:
     active: dev
 
 auth:
-  client-id: 31ae5169a7dc37e19605
-  client-secret: 43debfbf5b584d5a0c7b58d215c5462a29ecd5e1
+  client-id:
+  client-secret:
 ...
 ```
 
