@@ -8,7 +8,7 @@
   - Local (Dev) 에서는 H2 를, Server (prod) 에서는 MYSQL 을 사용하고 있습니다  
   - Local 과 Server 는 서로 다른 client_id 와 cliendt_screat 을 가지고 있습니다
 
-```properties
+```gradle
 ...
 ---
 spring:
@@ -46,15 +46,10 @@ jwt:
 
 > application.yml
 
-```properties
-spring:
-  profiles:
-    active: dev
-
+```gradle
 auth:
-  client-id:
-  client-secret:
-...
+  client-id: ******
+  client-secret: ******
 ```
 
 > AuthProperties.java
