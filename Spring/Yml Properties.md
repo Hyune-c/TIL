@@ -1,6 +1,6 @@
 # Yml Properties
 
-## Dev, Prod 설정 따로 사용하기
+## Profile 사용하기
 
 > application.yml
   
