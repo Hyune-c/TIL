@@ -8,27 +8,37 @@
   - Server 에서는 `-Dspring.profiles.active=prod` 환경변수를 통해 분리합니다
 
 ```properties
-spring:
-  profiles:
-    active: dev
-
+...
 ---
 spring:
   profiles: dev
   datasource:
     driverClassName: org.h2.Driver
     url: jdbc:h2:mem://localhost/sidedish_db;
-    ...
+    username: ******
+    password: ******
   h2:
     console:
       enabled: true
+auth:
+  client-id: 31******
+  client-secret: 43de******
+jwt:
+  salt: ******
 ---
 spring:
   profiles: prod
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sidedish_db?autoReconnect=true&useSSL=false&
+    url: jdbc:mysql://localhost:3306/sidedish_db?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: ******
+    password: ******
     ...
+auth:
+  client-id: 2807******
+  client-secret: 62a3b******
+jwt:
+  salt: ******
 ```
 
 ## Yml 에 값을 저장하여 사용하기
@@ -76,10 +86,6 @@ public class AuthService {
         ... authProperties.getClientId()
   }
 ```
-
-## 환경변수에 따른 호출 값 변경
-
-실패 중..............
 
 ## Yml 파일 나누기
 
