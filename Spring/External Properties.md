@@ -1,6 +1,6 @@
 # External Properties
 
-> 민감 정보를 github 에 올리지 않으면서 관리할 수 있는 여러가지 방법 중 외부 파일을 참조하는 방법을 작성하였습니다
+> 민감 정보를 관리할 수 있는 방법 중 외부 파일을 참조하는 것에 대해 작성하였습니다
 
 ## Source
 
@@ -10,7 +10,7 @@
 discord.token={your token}
 ```
 
-application.properties 는 github 에 올리지 않고 Server 에만 존재함으로서 민감정보를 보호할 수 있습니다
+application.properties 를 gitignore 함으로서 민감정보를 보호할 수 있습니다
 
 > com/hyune/raider50g/config/Properties.java
 
