@@ -9,7 +9,7 @@
 > docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 mysql               5.7                 f965319e89de        9 days ago          448MB
-> docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root --name baseball_mysql mysql:5.7
+> docker run -d --name baseball_mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root mysql --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
 > docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                               NAMES
 070ab2bff1b6        mysql:5.7           "docker-entrypoint.s…"   About a minute ago   Up About a minute   0.0.0.0:3306->3306/tcp, 33060/tcp   baseball_mysql
