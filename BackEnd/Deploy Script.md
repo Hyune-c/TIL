@@ -16,7 +16,7 @@ cd sidedish-08
 cd BE
 ./gradlew build -x test
 sleep 1
-nohup java -jar ./build/libs/sidedish-08-0.0.1-SNAPSHOT.jar &
+nohup java -jar ./build/libs/sidedish-08-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=dev &
 ```
 
 ```shell script

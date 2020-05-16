@@ -1,20 +1,20 @@
 # Commit Message Guide
+
 Subject : `현재 상태 : 남은 작업에 대한 요약`
 
 - working : 남은 작업에 대한 요약
 - complete : 작성한 작업에 대한 요약
 
-## TIL 
+## TIL
+
 YYYY/MM/DD 로 정리하였습니다.
 
 ## Design Pattern 
 
 ## Algorithm [링크](https://github.com/Hyune-c/algorithm)
+
 알고리즘을 풀면서 알게된 것들을 정리하였습니다.  
 실제로 푼 문제들은 링크의 repo 에 있습니다.
-
-## Let's Read 
-책을 읽고 난 후 이해하고 느낀 것을 저의 언어로 정리하였습니다.
 
 ## 공부하고 싶은 것들..
 
@@ -25,8 +25,10 @@ YYYY/MM/DD 로 정리하였습니다.
 #### 알고리즘 풀이
 #### UML / Diagram + 설계
 #### Factory (?)
+
 #### 자료구조
 - PriorityQueue 우선순위 큐
+
 #### Java
 - Enum
 - try-catch 문
