@@ -1,6 +1,7 @@
 # Question List
 
-1. MVC 란 무엇인가요?
+## Java
+> MVC 란 무엇인가요?
 
 - Model, View, Controller의 줄임말로 소프트웨어 설계의 한 종류입니다
   - Model
@@ -10,15 +11,15 @@
   - View
     - 유저에게 보여지는 것을 뜻합니다
 
-2. MVC1 패턴의 특징은 무엇인가요?
+> MVC1 패턴의 특징은 무엇인가요?
 
 - MVC 요소가 모두 JSP 페이지 안에 있어 가독성이 떨어지고 유지보수가 힘듭니다
 
-3. MVC2 패턴의 특징은 무엇인가요?
+> MVC2 패턴의 특징은 무엇인가요?
 
 - 서블릿을 통해 웹 브라우저의 요청을 처리하고, 그 결과를 JSP 페이지로 포워딩합니다
 
-4. Spring MVC 에서 DispatcherServlet 의 역할에 대해 설명해주세요
+> Spring MVC 에서 DispatcherServlet 의 역할에 대해 설명해주세요
 
 - HandlerMapping 을 통해 어떤 Controller 가 처리할지를 결정합니다
 - 결정된 Controller 를 통해 처리된 결과를 ModelAndView 로 받습니다
