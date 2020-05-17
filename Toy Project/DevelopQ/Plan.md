@@ -55,7 +55,7 @@
 - local
   - docker 를 통한 mysql
 - remote
-  - ? 를 통한 mysql
+  - heroku add-on 인 PostgreSQL 또는 clearDB 를 통해 mysql 연결
 
 ### # 제약조건
 
