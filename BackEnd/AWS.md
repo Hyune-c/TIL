@@ -113,7 +113,7 @@ OpenJDK 64-Bit Server VM (build 25.242-b08, mixed mode)
 > git clone -b be/dev --single-branch https://github.com/codesquad-member-2020/dust-5.git
 
 # 서버 시작 (백그라운드에서 시작)
-> ./gradlew build
+> ./gradlew build -x test
 > ./gradlew bootRun &
 Downloading https://services.gradle.org/distributions/gradle-6.2.2-bin.zip
 .........10%.........20%.........30%..........40%.........50%.........60%..........70%.........80%.........90%..........100%

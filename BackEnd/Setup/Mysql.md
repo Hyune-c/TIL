@@ -141,3 +141,8 @@ mysql> FLUSH PRIVILEGES;
 > sudo service mysql restart;
 > netstat -an | grep 3306
 ```
+
+CREATE USER 'airbnb'@`%` IDENTIFIED BY 'airbnb';
+create database airbnb_db;
+show databases;
+GRANT ALL ON airbnb_db.* TO 'airbnb'@'%' WITH GRANT OPTION;

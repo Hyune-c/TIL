@@ -40,6 +40,9 @@ mysql> GRANT ALL ON baseball06_db.* TO 'baseball06'@'%' WITH GRANT OPTION;
 mysql> FLUSH PRIVILEGES;
 ```
 
+GRANT ALL ON indextest_db.* TO 'hyunec'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 > /etc/mysql/my.cnf
 
 ```shell script
