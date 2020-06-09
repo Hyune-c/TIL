@@ -16,7 +16,7 @@
 2. 설치
 
    ```shell script
-   > sudo apt-get install mysql-server-5.7
+   > sudo apt-get install mysql-server-5.7 -y
    ```
 
 3. root 비밀번호 설정
@@ -26,31 +26,10 @@
 
    ```shell script
    > sudo mysql
-   Welcome to the MySQL monitor.  Commands end with ; or \g.
-   Your MySQL connection id is 4
-   Server version: 5.7.29-0ubuntu0.18.04.1 (Ubuntu)
-
-   Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
-
-   Oracle is a registered trademark of Oracle Corporation and/or its
-   affiliates. Other names may be trademarks of their respective
-   owners.
-
-   Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
    mysql> update mysql.user set plugin='mysql_native_password' where user='root';
-   Query OK, 1 row affected (0.00 sec)
-   Rows matched: 1  Changed: 1  Warnings: 0
-
    mysql> update mysql.user set authentication_string=PASSWORD('root') where user='root';
-   Query OK, 1 row affected, 1 warning (0.00 sec)
-   Rows matched: 1  Changed: 1  Warnings: 1
-
    mysql> flush privileges;
-   Query OK, 0 rows affected (0.01 sec)
-
    mysql> quit;
-   Bye
    ```
 
 4. root 접속 확인
