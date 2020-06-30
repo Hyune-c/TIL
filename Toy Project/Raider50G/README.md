@@ -1,6 +1,6 @@
 # Raider50G
 
-> Repository
+> Source Repository
 
 <https://github.com/Hyune-c/raider50g>
 
@@ -10,7 +10,9 @@
   - Discord API 테스트를 해본 기록입니다
 - [Work Log #2](https://github.com/Hyune-c/TIL/blob/master/Toy%20Project/Raider50G/Wokr%20Log%20%232.md)
   - 부족한 기반 지식으로 기본 구조 및 테스트를 진행하면서 실패한 기록입니다
-
+- [Work Log #3](https://github.com/Hyune-c/TIL/blob/master/Toy%20Project/Raider50G/Wokr%20Log%20%233.md)
+  - 기반 지식을 공부하고 처음으로 의미 있는 기능을 만든 기록입니다
+  
 ---
 
 ## 왜 만들어야 하는가 ?
@@ -38,6 +40,8 @@
 
 - 접속 여부가 불분명한 40명의 인원을 반복적으로 확인하며 초대하고 있습니다
 - 기록된 Spreadsheet 를 기반으로 초대 매크로를 만들어 사용하고 있습니다
+
+---
 
 ## 어떻게 개선할 것인가 ?
 
