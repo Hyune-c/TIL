@@ -1,22 +1,19 @@
-# Commit Message Guide
+# TIL
 
-Subject : `현재 상태 : 남은 작업에 대한 요약`
+공부한 내용들을 모아놓은 저장소입니다
 
-- working : 남은 작업에 대한 요약
-- complete : 작성한 작업에 대한 요약
+## Toy Project
 
-## TIL
+- Raider50G: 공격대 일정 관리 프로그램
+- DevelopQ: 개인 공부를 위한 퀴즈 프로그램 (보류)
 
-YYYY/MM/DD 로 정리하였습니다.
+## Algorithm
 
-## Design Pattern 
+[Source Repository](https://github.com/Hyune-c/algorithm)
 
-## Algorithm [링크](https://github.com/Hyune-c/algorithm)
+알고리즘을 풀면서 알게된 것들을 정리하였습니다
 
-알고리즘을 풀면서 알게된 것들을 정리하였습니다.  
-실제로 푼 문제들은 링크의 repo 에 있습니다.
-
-## 공부하고 싶은 것들..
+## 공부하고 싶은 것들
 
 #### 디자인 패턴
 #### TDD
