@@ -12,4 +12,6 @@
   - 부족한 기반 지식으로 기본 구조 및 테스트를 진행하면서 실패한 기록입니다
 - [Work Log #3](https://github.com/Hyune-c/TIL/blob/master/Toy%20Project/Raider50G/Wokr%20Log%20%233.md)
   - 기반 지식을 공부하고 처음으로 의미 있는 기능을 만든 기록입니다
+- [Work Log #4](https://github.com/Hyune-c/TIL/blob/master/Toy%20Project/Raider50G/Wokr%20Log%20%234.md)
+  - ing
   
