@@ -13,5 +13,5 @@
 - [Work Log #3](https://github.com/Hyune-c/TIL/blob/master/Toy%20Project/Raider50G/Wokr%20Log%20%233.md)
   - 기반 지식을 공부하고 처음으로 의미 있는 기능을 만든 기록입니다
 - [Work Log #4](https://github.com/Hyune-c/TIL/blob/master/Toy%20Project/Raider50G/Wokr%20Log%20%234.md)
-  - ing
+  - 수동 예약 관리를 위한 기본 기능을 완성한 기록입니다
   
