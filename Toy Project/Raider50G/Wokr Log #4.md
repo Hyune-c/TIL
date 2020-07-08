@@ -17,6 +17,10 @@
 
 - Test 와 DTO 에 대한 리팩토링
 
+<https://github.com/Hyune-c/raider50g/pull/15>
+
+- WebClient 의 분리
+
 ## 다음 작업
   
 - 채널의 메세지를 가져와서 조작하기
