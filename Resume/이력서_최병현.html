@@ -227,106 +227,79 @@ pre code {
 </style>
 
 <style>
-/*
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
 
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
-}
-
+/* Tomorrow Comment */
 .hljs-comment,
 .hljs-quote {
-  color: #998;
-  font-style: italic;
+	color: #8e908c;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333;
-  font-weight: bold;
-}
-
-.hljs-number,
-.hljs-literal,
+/* Tomorrow Red */
 .hljs-variable,
 .hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
-}
-
-.hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: bold;
-}
-
-.hljs-subst {
-  font-weight: normal;
-}
-
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
-}
-
 .hljs-tag,
 .hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal;
-}
-
+.hljs-selector-id,
+.hljs-selector-class,
 .hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
-
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
-}
-
-.hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
-}
-
-.hljs-meta {
-  color: #999;
-  font-weight: bold;
-}
-
 .hljs-deletion {
-  background: #fdd;
+	color: #c82829;
 }
 
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
 .hljs-addition {
-  background: #dfd;
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
 }
 
 .hljs-emphasis {
-  font-style: italic;
+	font-style: italic;
 }
 
 .hljs-strong {
-  font-weight: bold;
+	font-weight: bold;
 }
-
 </style>
 
 <style>
@@ -393,7 +366,7 @@ code {
     });
   </script>
 <h1 id="%EC%B5%9C%EB%B3%91%ED%98%84--back-end-%EA%B0%9C%EB%B0%9C%EC%9E%90">최병현 | Back-End 개발자</h1>
-<p>대고객 민원에서 서비스 배포까지 IT 비지니스의 A to Z 경험과 커뮤니케이션 능력, 결제에 대한 도메인 지식을 가지고 있는 Back-End 개발자입니다</p>
+<p>대고객 민원에서 서비스 배포까지 IT비지니스의 A to Z 경험과 커뮤니케이션 능력, 결제에 대한 도메인 지식을 가지고 있는 Back-End 개발자입니다</p>
 <h3 id="contact"><code>Contact</code></h3>
 <p>Email <strong>choi8608@gmail.com</strong></p>
 <p>Phone <strong>010-2459-2711</strong></p>
@@ -409,11 +382,7 @@ code {
 <h3 id="%ED%8D%BC%EC%8A%A4%ED%8A%B8%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%BD%94%EB%A6%AC%EC%95%84-it%EC%9A%B4%EC%98%81%ED%8C%80-2016920194">퍼스트데이터코리아 IT운영팀 (2016.9~2019.4)</h3>
 <ul>
 <li>VAN 승인계 운영. 가맹점 결제 시스템 구축 지원</li>
-<li>대형 가맹점 결제 시스템 구축 지원
-<ul>
-<li>결제 에이전트 (WIN4POS, FDK_MODULE) 에 대한 가이드와 검수 지원</li>
-</ul>
-</li>
+<li>대형 가맹점 결제 시스템 구축 지원</li>
 </ul>
 <h3 id="%ED%95%98%EB%82%98%EA%B8%88%EC%9C%B5ti-%EC%9D%B8%ED%94%84%EB%9D%BC%EC%84%9C%EB%B9%84%EC%8A%A4%ED%8C%80-%EA%B5%AC-%ED%95%98%EB%82%98%EC%95%84%EC%9D%B4%EC%97%94%EC%97%90%EC%8A%A4-2012120169">하나금융TI 인프라서비스팀 (구 하나아이엔에스) (2012.1~2016.9)</h3>
 <ul>
@@ -436,46 +405,31 @@ code {
 <h2 id="other-experience"><code>Other Experience</code></h2>
 <h3 id="toy-project">Toy Project</h3>
 <ul>
-<li>Raiders50G <a href="https://github.com/Hyune-c/raider50g">Link</a>
+<li>Raiders50G <a href="https://github.com/Hyune-c/raider50g">Link</a>,  <a href="https://github.com/Hyune-c/TIL/tree/master/Toy%20Project/Raider50G">WorkLog</a>
 <ul>
 <li>게임 WoW 의 공격대를 운영하면서 관리를 편하게 하고자 만든 프로젝트</li>
 </ul>
 </li>
 </ul>
 <h3 id="%EC%BD%94%EB%93%9C%EC%8A%A4%EC%BF%BC%EB%93%9C-%EB%A7%88%EC%8A%A4%ED%84%B0%EC%A6%88-%EC%BD%94%EC%8A%A4-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8">코드스쿼드 마스터즈 코스 팀 프로젝트</h3>
-<p>REST API, DB 설계/구현, 원활한 개발을 위한 Swagger 와 문서 작성 지원</p>
 <ul>
+<li>REST API, DB 설계/구현</li>
+<li>양질의 산출물을 내기 위한 지속적인 업무 협의와 Swagger 활용</li>
 <li>이슈관리 서비스 클론 <a href="https://github.com/Hyune-c/issue-tracker-02">Link</a></li>
 <li>에어비엔비 클론 <a href="https://github.com/Hyune-c/airbnb-01">Link</a></li>
 </ul>
 <h2 id="skill"><code>Skill</code></h2>
 <h3 id="junior">Junior</h3>
 <ul>
-<li>Back-End
-<ul>
 <li>Spring 을 통한 REST API 설계와 MVC, Data JPA 활용</li>
-<li>Java, AWS EC2, JWT, TDD, JUnit5, AssertJ</li>
-</ul>
-</li>
-<li>Database
-<ul>
+<li>Java, Shell Script, AWS EC2, JWT, TDD, JUnit5, AssertJ</li>
 <li>MySQL, Oracle</li>
-</ul>
-</li>
 </ul>
 <h3 id="novice">Novice</h3>
 <ul>
-<li>Front-End
-<ul>
-<li>Javascript, HTML/CSS</li>
-</ul>
-</li>
-<li>Back-End
-<ul>
-<li>Spring: Data JDBC, Security</li>
+<li>Spring Data JDBC, Security</li>
 <li>Node, NginX, Mokito</li>
-</ul>
-</li>
+<li>Javascript, HTML/CSS</li>
 </ul>
 <h3 id="etc">Etc</h3>
 <ul>
@@ -485,7 +439,7 @@ code {
 </ul>
 </li>
 <li>인프라 관리에 대한 포괄적인 이해</li>
-<li>알고리즘 <a href="https://github.com/Hyune-c/algorithm-legacy">Link 1</a> <a href="https://github.com/Hyune-c/algorithm">Link 2</a>
+<li>알고리즘 <a href="https://github.com/Hyune-c/algorithm-legacy">Link 1</a>, <a href="https://github.com/Hyune-c/algorithm">Link 2</a>
 <ul>
 <li>LeetCode 와 백준을 위주로 80 여 문제 풀이</li>
 </ul>
@@ -499,12 +453,12 @@ code {
 <h2 id="education"><code>Education</code></h2>
 <h3 id="%EC%BD%94%EB%93%9C%EC%8A%A4%EC%BF%BC%EB%93%9C-%EB%A7%88%EC%8A%A4%ED%84%B0%EC%A6%88-%EC%BD%94%EC%8A%A4-202001202006">코드스쿼드 마스터즈 코스 (2020.01~2020.06)</h3>
 <ul>
-<li>java, spring 기반의 Back-End 부트캠프 수료</li>
+<li>Java, Spring 기반의 Back-End 부트캠프 수료</li>
 <li>Front-End, iOS, Back-End 가 팀을 이뤄서 진행하는 7 개의 프로젝트를 수행</li>
 </ul>
 <h3 id="%EC%BD%94%EC%8A%A4%EC%8A%A4%ED%85%8C%EC%9D%B4%EC%B8%A0-%ED%94%84%EB%A6%AC-%EC%BD%94%EC%8A%A4-201910201912">코스스테이츠 프리 코스 (2019.10~2019.12)</h3>
 <ul>
-<li>node, javascript 기반의 최신 개발 기술 교육 수료</li>
+<li>Node, Javascript 기반의 최신 개발 기술 교육 수료</li>
 </ul>
 <h3 id="%EA%B4%91%EC%9A%B4%EB%8C%80%ED%95%99%EA%B5%90-%EC%84%9C%EC%9A%B8-%EC%BB%B4%ED%93%A8%ED%84%B0%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%ED%95%99%EA%B3%BC-2006320122">광운대학교 (서울) 컴퓨터소프트웨어 학과 (2006.3~2012.2)</h3>
 <ul>
