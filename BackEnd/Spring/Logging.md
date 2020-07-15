@@ -28,12 +28,12 @@ dependencies {
 
 - lombok plugin 설치
 
-![Logging_lombokPlugin](../image/Spring/Logging_lombokPlugin.png)
+![Logging_lombokPlugin](../image/Logging_lombokPlugin.png)
 
 - Annotation Processors `Enable`
 
 File > Settings > Build, Execution, Deployment > Compiler > Annotation Processors
-![Logging_AnnotationEnable](../image/Spring/Logging_AnnotationEnable.png)
+![Logging_AnnotationEnable](../image/Logging_AnnotationEnable.png)
 
 - lombok.config 를 통해 세부 설정이 가능합니다.
 
