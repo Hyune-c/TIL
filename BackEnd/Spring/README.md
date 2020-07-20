@@ -15,4 +15,4 @@
 
 - 쉬운 의존성 관리
 - Configuration 자동 설정
-- 내장 서버 (Tomcat)
+- 내장 서블릿 컨테이너 (Tomcat, Jetty, Undertow)
