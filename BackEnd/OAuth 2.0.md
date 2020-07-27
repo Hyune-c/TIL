@@ -5,10 +5,10 @@
 > RFC 에는 Authorization Server 로 인증을 담당하는 서버가 따로 있지만,  
 > 이하의 문서에서는 Resource Server 가 같은 역할을 하는 것으로 기록합니다
 
-|     | Resource Owner | Client                                               | Resouce Server                                                                                                                                             |
-| --- | -------------- | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 역할  | 사용자            | 개발자, App                                             | 자원을 가지고 있는 서버                                                                                                                                              |
-| 정보  |                | - Client ID <br> - Client Secret <br> - Access Token | - Client ID <br> - Client Secret <br> - Authorized redirect URIs <br> - 허용된 권한 (Client ID - user_id - scope) <br> - Authorization code <br> - Access Token |
+|      | Resource Owner | Client                                               | Resouce Server                                                                                                                                                  |
+| ---- | -------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 역할 | 사용자         | 개발자, App                                          | 자원을 가지고 있는 서버                                                                                                                                         |
+| 정보 |                | - Client ID <br> - Client Secret <br> - Access Token | - Client ID <br> - Client Secret <br> - Authorized redirect URIs <br> - 허용된 권한 (Client ID - user_id - scope) <br> - Authorization code <br> - Access Token |
 
 - Client ID : Client 식별자, 노출되어도 됨
 - Client Secret : Client 비밀번호, 노출되면 안됨

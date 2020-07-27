@@ -1,4 +1,4 @@
-# DataType 자료형 
+# DataType 자료형
 
 ## 원시(기본)형 Primitive type
 
@@ -13,8 +13,8 @@
 |        | double  | 8 byte               | 0.0 또는 0.0D | (1.7 X 10-308) ~ (1.7 X 10308) 의 근사값               |
 | 문자형 | char    | 2 byte (유니코드)    | '\u0000'      |                                                        |
 
-- 기본값이 있기 때문에 null이 존재하지 않습니다. 
-    - 만약 null을 넣고 싶다면 참조형를 활용합니다.
+- 기본값이 있기 때문에 null이 존재하지 않습니다.
+  - 만약 null을 넣고 싶다면 참조형를 활용합니다.
 - 실제 값을 저장하는 공간으로 스택 메모리에 저장됩니다.
 - 컴파일 시점에 담을 수 없는 값을 할당하면 컴파일 에러가 발생합니다.
 
@@ -53,31 +53,29 @@
 ## 래퍼 클래스 Wrapper Class
 
 | Primitive Type | Wrapper Class |
-| -------------- | -------------- |
-| boolean        | Boolean        |
-| char           | Character      |
-| byte           | Byte           |
-| short          | Short          |
-| int            | Integer        |
-| long           | Long           |
-| float          | Float          |
-| double         | Double         |
-
+| -------------- | ------------- |
+| boolean        | Boolean       |
+| char           | Character     |
+| byte           | Byte          |
+| short          | Short         |
+| int            | Integer       |
+| long           | Long          |
+| float          | Float         |
+| double         | Double        |
 
 - 기본 타입의 데이터를 객체로 취급해야할 때 사용합니다.
-    - 메소드의 인수로 객체 타입만이 요구되는 경우.
-
+  - 메소드의 인수로 객체 타입만이 요구되는 경우.
 
 ## 그외
 
 ### BigInteger / BigDecimal
 
-BigInteger 클래스는 무한한 크기의 정수형 숫자를 다룰 수 있습니다.   
-BigDecimal 클래스는 무한한 크기의 부동 소수점 숫자를 다룰 수 있습니다. 
+BigInteger 클래스는 무한한 크기의 정수형 숫자를 다룰 수 있습니다.
+BigDecimal 클래스는 무한한 크기의 부동 소수점 숫자를 다룰 수 있습니다.
 
 ### 타입 변환 Type conversion
 
-boolean형을 제외한 나머지 기본형 타입끼리는 타입 변환을 자유롭게 할 수 있습니다. 
+boolean형을 제외한 나머지 기본형 타입끼리는 타입 변환을 자유롭게 할 수 있습니다.
 
 > 묵시적 타입 변환 (자동) Implicit Conversion, Promotion
 
@@ -88,19 +86,22 @@ boolean형을 제외한 나머지 기본형 타입끼리는 타입 변환을 자
 
 묵시적 타입 변환이 불가능한 경우, 사용자가 강제적으로 변환합니다. 즉, 넓은 범위의 타입에서 작은 범위의 타입으로 변환시키는 것이고, 이 때 데이터 손실이 일어납니다.
 
-
 ### 변수 (Variable) vs 상수 (Constant) vs 리터럴 (Literal) 
+
 > 변수
+
 - 데이터를 저장할 메모리 공간을 의미합니다.
 - 선언과 동시 초기화, 선언 후 초기화 모두 가능 합니다.
 
 > 상수
+
 - 상수는 선언과 동시에 초기화되며, 이후 변환되지 않는 변수를 의미합니다.
 
 > 리터럴
+
 - 값 그 자체로 변수와 상수와는 달리 저장된 메모리 공간을 가리키는 이름이 없습니다.
 
-```
+```java
 char a = 'c'    // (변수) = (리터럴)
 final int b = 4 // (상수) = (리터럴)
 ```
