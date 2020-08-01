@@ -85,4 +85,73 @@ public class AuthService {
 
 ## Yml 파일 나누기
 
-생각 중..............
+application.yml
+
+```properties
+spring:
+  profiles:
+#    active: log, local, app
+    active: log, prod, app
+```
+
+application-local.yml
+
+```properties
+spring:
+  profiles: local
+  datasource:
+    platform: h2
+    driver-class-name: org.h2.Driver
+    username:
+    password:
+    url: jdbc:h2:tcp://localhost:9092/mem:testdb;MVCC=TRUE
+    initialization-mode: always
+  jpa:
+    database-platform: H2
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+```
+
+application-prod.yml
+
+```properties
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username:
+    password:
+    url: jdbc:mysql://localhost:3306/raider50g_db
+    initialization-mode: always
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+```
+
+application-app.yml
+
+```properties
+spring:
+  profiles: app
+discord:
+  token: NzA0Nj**************************
+  apiUrl: https://discordapp.com/api
+  userAgent: Raiders 50G Bot Agent
+```
+
+application-log.yml
+
+```properties
+spring:
+  profiles: log
+logging:
+  level:
+    root: debug
+    sql: trace
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS,Asia/Seoul} %magenta([%thread]) %highlight(%-5level) %logger.%M - %msg%n"
+```
