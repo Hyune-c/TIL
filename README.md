@@ -16,22 +16,30 @@
 ## 공부하고 싶은 것들
 
 #### 디자인 패턴
+
 #### TDD
+
 - maven, gradle
+
 #### Git 사용법
+
 #### 알고리즘 풀이
+
 #### UML / Diagram + 설계
+
 #### Factory (?)
 
 #### 자료구조
+
 - PriorityQueue 우선순위 큐
 
 #### Java
+
 - Enum
 - try-catch 문
-	- try-with
--  I/O Stream
-	- File
+  - try-with
+- I/O Stream
+  - File
 - 접근 한정자  
 - 객체 지향 프로그래밍  
 - 클래스와 인스턴스  
