@@ -29,7 +29,7 @@ public Reservations setReservations
 ```java
 @PutMapping(path = "/reservations/{reservationId}")
 public Reservations cancleReservations
-(@PathVariable(name = "reservationId") Integer reservationInfoId) { .. }
+(@PathVariable(name = "reservationId") Integer reservationInfoId) { ... }
 ```
 
 ## javax.validation 빈 검증

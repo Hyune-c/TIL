@@ -67,10 +67,45 @@ default-character-set = utf8
 mysql> status
 --------------
 ...
-Server characterset:	utf8
-Db     characterset:	utf8
-Client characterset:	utf8
-Conn.  characterset:	utf8
+Server characterset: utf8
+Db     characterset: utf8
+Client characterset: utf8
+Conn.  characterset: utf8
 ...
 --------------
+```
+
+## PostgreSql
+
+### boot
+
+```shell script
+> docker pull mysql:5.7
+> docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+postgres            latest              b03968f50f0e        5 weeks ago         313MB
+> ...
+> docker ps -a                                                                                   8m 35s
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                    PORTS                               NAMES
+84ede3ccb637        postgres            "docker-entrypoint.s…"   5 weeks ago         Up 11 minutes             0.0.0.0:5432->5432/tcp              albacheck
+> docker exec -it albacheck bash
+```
+
+### setting
+
+> create DB, User
+
+```shell script
+> psql -U postgres
+psql (12.3 (Debian 12.3-1.pgdg100+1))
+Type "help" for help.
+
+postgres=# CREATE DATABASE albacheck;
+CREATE DATABASE
+postgres=# CREATE DATABASE albacheck_checklist;
+CREATE DATABASE
+postgres=# \q
+
+postgres=# CREATE USER hyune WITH SUPERUSER CREATEDB LOGIN ENCRYPTED PASSWORD 'hyunec';
+CREATE ROLE
 ```
