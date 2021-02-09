@@ -52,10 +52,10 @@ Browser 를 통해 로그인 합니다.
 ```shell script
 > heroku git:remote -a signup-5-dev
 > git remote -v
-heroku	https://git.heroku.com/signup-5-dev.git (fetch)
-heroku	https://git.heroku.com/signup-5-dev.git (push)
-origin	https://github.com/codesquad-memeber-2020/signup-5.git (fetch)
-origin	https://github.com/codesquad-memeber-2020/signup-5.git (push)
+heroku https://git.heroku.com/signup-5-dev.git (fetch)
+heroku https://git.heroku.com/signup-5-dev.git (push)
+origin https://github.com/codesquad-memeber-2020/signup-5.git (fetch)
+origin https://github.com/codesquad-memeber-2020/signup-5.git (push)
 ```
 
 - deploy

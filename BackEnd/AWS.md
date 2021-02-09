@@ -152,7 +152,7 @@ LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1
 29-03-2020 08:56:34.148 [main] INFO  com.codesquad.signup.SignupApplication.logStarting - Starting SignupApplication on ip-172-31-45-252 with PID 10317 (/home/ubuntu/build/signup/build/classes/java/main started by ubuntu in /home/ubuntu/build/signup)
 ```
 
-> # 아래는 검토 후 수정해야 되는 내용들입니다.
+> # 아래는 검토 후 수정해야 되는 내용들입니다
 
 > IAM > 엑세스 관리 > 역할
 
@@ -169,7 +169,6 @@ LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1
     - Name : Dust-5_EC2_Deploy
 4. 검토
     - Dust-5_EC2_Deploy
-
 
 ### # Code Deploy 그룹 추가
 
@@ -414,12 +413,10 @@ LOGBACK: No context given for c.q.l.core.rolling.SizeAndTimeBasedRollingPolicy@1
 
 <http://ec2-52-79-241-239.ap-northeast-2.compute.amazonaws.com:8080/api/users/testOk>  
 <http://ec2-52-79-241-239.ap-northeast-2.compute.amazonaws.com:8080/api/users/testFail>
+
 ## 참고 자료
 
 <https://jojoldu.tistory.com/281>
-
-
-
 
 -- 누락?
 
