@@ -1,3 +1,3 @@
-# 좋은 글들
+# TIL
 
-- [Git flow, GitHub flow, GitLab flow](https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/)
+개인적으로 공부한 내용들을 모아놓았습니다.
